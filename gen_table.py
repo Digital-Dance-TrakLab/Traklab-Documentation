@@ -19,7 +19,7 @@ res = map(convert, result)
 import csv
 
 # open the file in the write mode
-f = open('class_table', 'w')
+f = open('class_table.csv', 'w')
 
 # create the csv writer
 writer = csv.writer(f)
