@@ -9,7 +9,7 @@ result = [os.path.join(dp, f) for dp, dn, filenames in os.walk(path) for f in fi
 def convert(path: str):
     className = path[path.rfind("\\")+1:].replace(".png","")
     imgPath = "https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/" + path.replace("\\","/")   
-    markdownImg = "<img width=400 src=\"" + imgPath + "\" />"
+    markdownImg = "<img width=800 src=\"" + imgPath + "\" />"
     return (className, markdownImg)
     
 
