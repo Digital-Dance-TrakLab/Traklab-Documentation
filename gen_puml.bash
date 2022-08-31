@@ -1,1 +1,0 @@
-puml-gen C:\Projects\unity\unity-extension\Assets\ C:\Projects\unity\unity-extension\out_puml -dir -createAssociation -excludePaths Assets\OptiTrack
