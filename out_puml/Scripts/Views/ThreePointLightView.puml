@@ -1,0 +1,11 @@
+@startuml
+class ThreePointLightView {
+    + ThreePointLightView()
+}
+VisualElement <|-- ThreePointLightView
+ThreePointLightView --> "header" ComponentHeader
+ThreePointLightView --> "leftcolor" ColorField
+ThreePointLightView --> "rightcolor" ColorField
+ThreePointLightView --> "frontcolor" ColorField
+ThreePointLightView --> "makeSame" Toggle
+@enduml

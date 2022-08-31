@@ -1,0 +1,5 @@
+@startuml
+class WindowUtilityFunctions <<static>> {
+    + {static} NumberOfOpenWindow() : int
+}
+@enduml

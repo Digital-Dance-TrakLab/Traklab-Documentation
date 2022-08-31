@@ -1,0 +1,18 @@
+@startuml
+class ParticleModelTest {
+    window : EditorWindow
+    particleObject : GameObject
+    model : ParticleModel
+    actorModel : ActorModel
+    view : ParticleView
+    + Setup() : void
+    + TearDown() : void
+    + EmitFromIsChanged() : IEnumerator
+    - loadParticles() : GameObject
+    - getNumberOfChildInstances(t:List<Transform>, type:Type) : int
+}
+class TestWindow {
+}
+ParticleModelTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

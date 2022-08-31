@@ -1,0 +1,5 @@
+@startuml
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\AvatarConfigurationsToBones.puml
+
+@enduml

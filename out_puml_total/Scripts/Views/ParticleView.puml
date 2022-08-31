@@ -1,0 +1,10 @@
+@startuml
+class ParticleView {
+    - header : ComponentHeader
+    - colour : ColorField
+    - emitFrom : DropdownField
+    - objectField : ObjectSelectionOption
+    + ParticleView(go:GameObject)
+}
+VisualElement <|-- ParticleView
+@enduml

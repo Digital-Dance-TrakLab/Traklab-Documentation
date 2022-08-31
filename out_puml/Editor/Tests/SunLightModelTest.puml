@@ -1,0 +1,16 @@
+@startuml
+class SunLightModelTest {
+    + Setup() : void
+    + TearDown() : void
+    + ModelSetsClearFlags() : IEnumerator
+    + ModelSetsTimeOfDay() : IEnumerator
+    + SunLightModelInitialiseTest() : IEnumerator
+    + SunLightModelColorTest() : IEnumerator
+    - AssertAllConditionHoldsWhenEnabled() : void
+    - AssertAllConditionHoldsWhenDisabled() : void
+    + CorrectlyEnablesAndDisables() : IEnumerator
+}
+SunLightModelTest --> "go" GameObject
+SunLightModelTest --> "model" SunLightModel
+SunLightModelTest --> "mainCamera" Camera
+@enduml

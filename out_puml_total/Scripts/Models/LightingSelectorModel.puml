@@ -1,0 +1,7 @@
+@startuml
+class LightingSelectorModel {
+    LightingSelectorModel()
+    + <<override>> CreateUI() : VisualElement
+}
+SelectorModel <|-- LightingSelectorModel
+@enduml

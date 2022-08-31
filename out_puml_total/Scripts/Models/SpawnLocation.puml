@@ -1,0 +1,12 @@
+@startuml
+class SpawnLocation {
+    origin : GameObject
+    nChildren : int
+    nChildrenCurrent : int
+    gap : float = 2.0f
+    Start() : void
+    Update() : void
+    + UpdateSpawnLocations(origin:GameObject, nChildrenCurrent:int) : void
+}
+MonoBehaviour <|-- SpawnLocation
+@enduml

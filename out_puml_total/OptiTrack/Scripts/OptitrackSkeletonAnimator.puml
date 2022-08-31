@@ -1,0 +1,21 @@
+@startuml
+class OptitrackSkeletonAnimator {
+    + StreamingClient : OptitrackStreamingClient
+    + SkeletonAssetName : string = "Skeleton1"
+    + DestinationAvatar : Avatar
+    - m_humanPose : HumanPose
+    - m_skeletonDef : OptitrackSkeletonDefinition
+    - m_rootObject : GameObject
+    - m_boneObjectMap : Dictionary<Int32, GameObject>
+    - m_cachedMecanimBoneNameMap : Dictionary<string, string>
+    - m_srcAvatar : Avatar
+    - m_srcPoseHandler : HumanPoseHandler
+    - m_destPoseHandler : HumanPoseHandler
+    Start() : void
+    Update() : void
+    - MecanimSetup(rootObjectName:string) : void
+    - RemapBoneRotation(boneName:string) : Quaternion
+    - CacheBoneNameMap(convention:OptitrackBoneNameConvention, assetName:string) : void
+}
+MonoBehaviour <|-- OptitrackSkeletonAnimator
+@enduml

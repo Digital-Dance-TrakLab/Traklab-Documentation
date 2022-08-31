@@ -1,0 +1,8 @@
+@startuml
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\RigidBodyModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Views\RigidBodyView.puml
+
+RigidBodyModel -[dotted]-> RigidBodyView : creates
+@enduml

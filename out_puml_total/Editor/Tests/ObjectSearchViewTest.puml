@@ -1,0 +1,9 @@
+@startuml
+class ObjectSearchViewTest {
+    go : GameObject
+    + Setup() : void
+    + TearDown() : void
+    + CorrectlyAddsGameObjectsToList() : IEnumerator
+    + CorrectlyAddsGameObjectsToListWhenEmpty() : IEnumerator
+}
+@enduml

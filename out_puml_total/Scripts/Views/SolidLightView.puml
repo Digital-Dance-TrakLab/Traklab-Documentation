@@ -1,0 +1,8 @@
+@startuml
+class SolidLightView {
+    - header : ComponentHeader
+    - color : ColorField
+    + SolidLightView()
+}
+VisualElement <|-- SolidLightView
+@enduml

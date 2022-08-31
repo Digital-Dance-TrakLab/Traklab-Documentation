@@ -1,0 +1,17 @@
+@startuml
+class PreviewView {
+    + PreviewView(gameObject:GameObject, imageSize:Rect)
+    + GetGameObject() : GameObject
+    - OnUpdate() : void
+    BeginDraw() : void
+    EndDraw() : Texture2D
+    + CopyObjectPreview() : Texture2D
+    + CalculateBounds() : Bounds
+}
+VisualElement <|-- PreviewView
+PreviewView --> "gameObject" GameObject
+PreviewView --> "previewGameObject" GameObject
+PreviewView --> "image" Image
+PreviewView o-> "prevRenderer" PreviewRenderUtility
+PreviewView --> "imageSize" Rect
+@enduml

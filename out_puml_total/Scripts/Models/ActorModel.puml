@@ -1,0 +1,16 @@
+@startuml
+class ActorModel {
+    + avatar : GameObject
+    + previous_avatar : GameObject
+    + actor : GameObject
+    + skeletonName : string
+    - currentAnimation : AnimationClip
+    - animator : OptitrackSkeletonAnimator
+    + <<override>> OnChanged() : void
+    + loadDefaultAvatar() : void
+    + <<override>> CreateUI() : VisualElement
+    # <<override>> Update() : void
+    PickRandomAnimation() : AnimationClip
+}
+Model <|-- ActorModel
+@enduml

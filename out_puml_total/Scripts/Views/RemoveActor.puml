@@ -1,0 +1,8 @@
+@startuml
+class RemoveActor {
+    +  <<event>> onActorRemoved : ActorRemoved 
+    - myButton : Button
+    + RemoveActor(go:GameObject)
+}
+VisualElement <|-- RemoveActor
+@enduml

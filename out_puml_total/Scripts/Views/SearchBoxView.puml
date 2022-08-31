@@ -1,0 +1,15 @@
+@startuml
+class SearchBoxView {
+    selected : int
+    +  <<event>> objectSelected : ObjectSelected 
+    + gameObjects : List<GameObject>
+    + content : VisualElement
+    + GetContent() : VisualElement
+    + SearchBoxView()
+    + InvokeSelected(i:int) : void
+    + AddGameObject(go:GameObject) : void
+    + AddActor(go:GameObject) : void
+    + RemoveGameObject(go:GameObject) : void
+}
+VisualElement <|-- SearchBoxView
+@enduml

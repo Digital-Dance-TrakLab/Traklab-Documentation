@@ -1,0 +1,3 @@
+@startuml
+!include ..\..\..\out_puml\Scripts\Views\EffectSelector.puml
+@enduml

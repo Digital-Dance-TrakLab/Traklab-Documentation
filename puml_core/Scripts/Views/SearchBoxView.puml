@@ -1,0 +1,7 @@
+@startuml
+
+!include ..\..\..\out_puml\Scripts\Views\SearchBoxView.puml
+
+SearchBoxView -[dotted]-> OnChanged : subcribes
+
+@enduml

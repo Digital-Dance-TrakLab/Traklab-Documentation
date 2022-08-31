@@ -1,0 +1,11 @@
+@startuml
+class OptitrackRigidBody {
+    + StreamingClient : OptitrackStreamingClient
+    + RigidBodyId : Int32
+    + NetworkCompensation : bool = true
+    Start() : void
+    Update() : void
+    UpdatePose() : void
+}
+MonoBehaviour <|-- OptitrackRigidBody
+@enduml

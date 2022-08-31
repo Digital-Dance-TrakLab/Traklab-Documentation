@@ -1,112 +1,40 @@
-Class,Diagram
-
-ObjectEditor,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Editor/ObjectEditor/ObjectEditor.png"" />"
-
-SceneEditor,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Editor/SceneEditor/SceneEditor.png"" />"
-
-ActorModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/ActorModel/ActorModel.png"" />"
-
-AmbientLightingModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/AmbientLightingModel/AmbientLightingModel.png"" />"
-
-AvatarConfigurationsToBones,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/AvatarConfigurationsToBones/AvatarConfigurationsToBones.png"" />"
-
-BackgroundSelectorModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/BackgroundSelectorModel/BackgroundSelectorModel.png"" />"
-
-CameraModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/CameraModel/CameraModel.png"" />"
-
-EffectSelectorModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/EffectSelectorModel/EffectSelectorModel.png"" />"
-
-LightingModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/LightingModel/LightingModel.png"" />"
-
-LightingSelectorModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/LightingSelectorModel/LightingSelectorModel.png"" />"
-
-LineRendererModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/LineRendererModel/LineRendererModel.png"" />"
-
-Model,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/Model/Model.png"" />"
-
-MotiveConnectModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/MotiveConnectModel/MotiveConnectModel.png"" />"
-
-MotiveStateModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/MotiveStateModel/MotiveStateModel.png"" />"
-
-MultiChildModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/MultiChildModel/MultiChildModel.png"" />"
-
-OnChanged,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/OnChanged/OnChanged.png"" />"
-
-OnDeleted,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/OnDeleted/OnDeleted.png"" />"
-
-ParticleModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/ParticleModel/ParticleModel.png"" />"
-
-PreviewModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/PreviewModel/PreviewModel.png"" />"
-
-RigidBodyModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/RigidBodyModel/RigidBodyModel.png"" />"
-
-SceneModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/SceneModel/SceneModel.png"" />"
-
-SelectorModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/SelectorModel/SelectorModel.png"" />"
-
-SkyboxModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/SkyboxModel/SkyboxModel.png"" />"
-
-SolidColourModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/SolidColourModel/SolidColourModel.png"" />"
-
-SpawnLocation,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/SpawnLocation/SpawnLocation.png"" />"
-
-SunLightModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/SunLightModel/SunLightModel.png"" />"
-
-ThreePointLightModel,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/ThreePointLightModel/ThreePointLightModel.png"" />"
-
-Utils,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/Utils/Utils.png"" />"
-
-RandomNameGenerator,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Utility/RandomNameGenerator/RandomNameGenerator.png"" />"
-
-StringUtility,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Utility/StringUtility/StringUtility.png"" />"
-
-WindowUtilityFunctions,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Utility/WindowUtilityFunctions/WindowUtilityFunctions.png"" />"
-
-ActorView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ActorView/ActorView.png"" />"
-
-AddActor,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/AddActor/AddActor.png"" />"
-
-AddRigidBody,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/AddRigidBody/AddRigidBody.png"" />"
-
-AmbientLightingView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/AmbientLightingView/AmbientLightingView.png"" />"
-
-BackgroundSelector,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/BackgroundSelector/BackgroundSelector.png"" />"
-
-CameraView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/CameraView/CameraView.png"" />"
-
-ComponentHeader,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ComponentHeader/ComponentHeader.png"" />"
-
-EffectSelector,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/EffectSelector/EffectSelector.png"" />"
-
-LightSelection,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/LightSelection/LightSelection.png"" />"
-
-LineRendererView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/LineRendererView/LineRendererView.png"" />"
-
-ModeChangeView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ModeChangeView/ModeChangeView.png"" />"
-
-ObjectSearchView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ObjectSearchView/ObjectSearchView.png"" />"
-
-ObjectSelectionOption,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ObjectSelectionOption/ObjectSelectionOption.png"" />"
-
-ObjectView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ObjectView/ObjectView.png"" />"
-
-ParticleView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ParticleView/ParticleView.png"" />"
-
-PreviewView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/PreviewView/PreviewView.png"" />"
-
-RemoveActor,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/RemoveActor/RemoveActor.png"" />"
-
-RigidBodyView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/RigidBodyView/RigidBodyView.png"" />"
-
-SceneView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/SceneView/SceneView.png"" />"
-
-SearchBoxView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/SearchBoxView/SearchBoxView.png"" />"
-
-SkyboxSelection,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/SkyboxSelection/SkyboxSelection.png"" />"
-
-SolidLightView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/SolidLightView/SolidLightView.png"" />"
-
-SunlightView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/SunlightView/SunlightView.png"" />"
-
-ThreePointLightView,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ThreePointLightView/ThreePointLightView.png"" />"
-
+Class,Diagram
+CompletedInheritance.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/CompletedInheritance.svg"" />"
+ObjectEditor.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Editor/ObjectEditor/ObjectEditor.svg"" />"
+SceneEditor.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Editor/SceneEditor/SceneEditor.svg"" />"
+AmbientLightingModel.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/AmbientLightingModel/AmbientLightingModel.svg"" />"
+AvatarConfigurationsToBones.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/AvatarConfigurationsToBones/AvatarConfigurationsToBones.svg"" />"
+BackgroundSelectorModel.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/BackgroundSelectorModel/BackgroundSelectorModel.svg"" />"
+CameraModel.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/CameraModel/CameraModel.svg"" />"
+EffectSelectorModel.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/EffectSelectorModel/EffectSelectorModel.svg"" />"
+LightingSelectorModel.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/LightingSelectorModel/LightingSelectorModel.svg"" />"
+LineRendererModel.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/LineRendererModel/LineRendererModel.svg"" />"
+Model.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/Model/Model.svg"" />"
+MotiveConnectModel.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Models/MotiveConnectModel/MotiveConnectModel.svg"" />"
+RandomNameGenerator.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Utility/RandomNameGenerator/RandomNameGenerator.svg"" />"
+StringUtility.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Utility/StringUtility/StringUtility.svg"" />"
+WindowUtilityFunctions.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Utility/WindowUtilityFunctions/WindowUtilityFunctions.svg"" />"
+ActorView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ActorView/ActorView.svg"" />"
+AddActor.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/AddActor/AddActor.svg"" />"
+AddRigidBody.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/AddRigidBody/AddRigidBody.svg"" />"
+AmbientLightingView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/AmbientLightingView/AmbientLightingView.svg"" />"
+BackgroundSelector.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/BackgroundSelector/BackgroundSelector.svg"" />"
+CameraView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/CameraView/CameraView.svg"" />"
+ComponentHeader.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ComponentHeader/ComponentHeader.svg"" />"
+EffectSelector.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/EffectSelector/EffectSelector.svg"" />"
+LightSelection.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/LightSelection/LightSelection.svg"" />"
+LineRendererView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/LineRendererView/LineRendererView.svg"" />"
+ModeChangeView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ModeChangeView/ModeChangeView.svg"" />"
+ObjectSearchView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ObjectSearchView/ObjectSearchView.svg"" />"
+ObjectSelectionOption.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ObjectSelectionOption/ObjectSelectionOption.svg"" />"
+ObjectView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ObjectView/ObjectView.svg"" />"
+ParticleView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ParticleView/ParticleView.svg"" />"
+PreviewView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/PreviewView/PreviewView.svg"" />"
+RemoveActor.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/RemoveActor/RemoveActor.svg"" />"
+RigidBodyView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/RigidBodyView/RigidBodyView.svg"" />"
+SceneView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/SceneView/SceneView.svg"" />"
+SearchBoxView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/SearchBoxView/SearchBoxView.svg"" />"
+SkyboxSelection.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/SkyboxSelection/SkyboxSelection.svg"" />"
+SolidLightView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/SolidLightView/SolidLightView.svg"" />"
+SunlightView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/SunlightView/SunlightView.svg"" />"
+ThreePointLightView.svg,"<img src=""https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Views/ThreePointLightView/ThreePointLightView.svg"" />"

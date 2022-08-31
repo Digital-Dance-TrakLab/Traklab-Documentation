@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\BackgroundSelectorModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Models\SelectorModel.puml
+!include ..\..\..\out_puml\Scripts\Views\BackgroundSelector.puml
+
+BackgroundSelectorModel -[dotted]-> BackgroundSelector : creates
+
+@enduml

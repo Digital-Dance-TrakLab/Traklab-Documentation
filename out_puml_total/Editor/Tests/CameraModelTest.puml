@@ -1,0 +1,16 @@
+@startuml
+class CameraModelTest {
+    go : GameObject
+    model : CameraModel
+    mainCamera : Camera
+    + Setup() : void
+    + TearDown() : void
+    + HorizentallyMoved() : IEnumerator
+    + VerticallyMoved() : IEnumerator
+    + LookAtWhileMoved() : IEnumerator
+}
+class TestWindow {
+}
+CameraModelTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

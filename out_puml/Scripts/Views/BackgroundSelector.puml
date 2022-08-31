@@ -1,0 +1,8 @@
+@startuml
+class BackgroundSelector {
+    + BackgroundSelector(choices:List<string>, choice:string)
+}
+VisualElement <|-- BackgroundSelector
+BackgroundSelector --> "header" ComponentHeader
+BackgroundSelector --> "selected" DropdownField
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+class ParticleViewTest {
+    + Setup() : void
+    + TearDown() : void
+    + ColourCanBeSet() : IEnumerator
+    + BaseParticleCanBeSet() : IEnumerator
+    + EmitFromCanBeSet() : IEnumerator
+}
+class TestWindow {
+}
+ParticleViewTest --> "window" EditorWindow
+ParticleViewTest --> "particleObject" GameObject
+ParticleViewTest --> "model" ParticleModel
+ParticleViewTest --> "view" ParticleView
+ParticleViewTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

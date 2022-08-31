@@ -1,0 +1,7 @@
+@startuml
+class EffectSelectorModel {
+    EffectSelectorModel()
+    + <<override>> CreateUI() : VisualElement
+}
+SelectorModel <|-- EffectSelectorModel
+@enduml

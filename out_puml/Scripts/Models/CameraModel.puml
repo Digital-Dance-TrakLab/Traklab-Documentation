@@ -1,0 +1,12 @@
+@startuml
+class CameraModel {
+    + xPosition : float = 0
+    + yPosition : float = 2
+    + stage : string = "Forward"
+    + <<override>> OnChanged() : void
+    + <<override>> Start() : void
+    + <<override>> CreateUI() : VisualElement
+}
+Model <|-- CameraModel
+CameraModel --> "mainCamera" Camera
+@enduml

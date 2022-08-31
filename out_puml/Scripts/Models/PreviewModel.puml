@@ -1,0 +1,6 @@
+@startuml
+class PreviewModel {
+    + <<override>> CreateUI() : VisualElement
+}
+Model <|-- PreviewModel
+@enduml

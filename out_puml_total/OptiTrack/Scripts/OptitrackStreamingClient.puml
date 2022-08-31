@@ -1,0 +1,150 @@
+@startuml
+enum OptitrackBoneNameConvention {
+    Motive,
+    FBX,
+    BVH,
+}
+enum StreamingCoordinatesValues {
+    Local,
+    Global,
+}
+class OptitrackPose {
+    + Position : Vector3
+    + Orientation : Quaternion
+}
+class OptitrackMarkerState {
+    + Name : string
+    + Position : Vector3
+    + Size : float
+    + Labeled : bool
+    + Id : Int32
+    + IsActive : bool
+}
+class OptitrackRigidBodyState {
+    + DeliveryTimestamp : OptitrackHiResTimer.Timestamp
+    + Pose : OptitrackPose
+}
+class OptitrackSkeletonState {
+    + BonePoses : Dictionary<Int32, OptitrackPose>
+    + LocalBonePoses : Dictionary<Int32, OptitrackPose>
+}
+class OptitrackRigidBodyDefinition {
+    + Id : Int32
+    + Name : string
+    + Markers : List<MarkerDefinition>
+}
+class OptitrackSkeletonDefinition {
+    + Id : Int32
+    + Name : string
+    + Bones : List<BoneDefinition>
+    + BoneIdToParentIdMap : Dictionary<Int32, Int32>
+}
+class OptitrackMarkersDefinition {
+    + Name : string
+}
+class OptitrackForcePlateDefinition {
+    + Id : Int32
+    + SerialNumber : string
+    + Width : float
+    + Length : float
+    + ElectricalOffset : Vector3
+    + CalibrationMatrix : List<float>
+    + Corners : List<float>
+    + PlateType : Int32
+    + ChannelDataType : Int32
+    + ChannelCount : Int32
+    + ChannelNames : List<string>
+}
+class OptitrackCameraDefinition {
+    + Name : string
+    + Position : Vector3
+    + Orientation : Quaternion
+}
+class OptitrackHiResTimer <<static>> {
+    + {static} Now() : Timestamp
+}
+class OptitrackStreamingClient {
+    + ServerAddress : string = "127.0.0.1"
+    + LocalAddress : string = "127.0.0.1"
+    + ConnectionType : ClientConnectionType
+    + SkeletonCoordinates : StreamingCoordinatesValues
+    + BoneNamingConvention : OptitrackBoneNameConvention
+    + DrawMarkers : bool = false
+    + DrawCameras : bool = false
+    + DrawForcePlates : bool = false
+    + RecordOnPlay : bool = false
+    + SkipDataDescriptions : bool = false
+    - m_doneSubscriptionNotice : bool = false
+    - m_receivedFrameSinceConnect : bool = false
+    - m_hasDrawnCameras : bool = false
+    - m_hasDrawnForcePlates : bool = false
+    - m_lastFrameDeliveryTimestamp : OptitrackHiResTimer.Timestamp
+    - m_connectionHealthCoroutine : Coroutine = null
+    - m_client : NatNetClient
+    - m_dataDescs : NatNetClient.DataDescriptions
+    - m_rigidBodyDefinitions : List<OptitrackRigidBodyDefinition>
+    - m_skeletonDefinitions : List<OptitrackSkeletonDefinition>
+    - m_markersDefinitions : List<OptitrackMarkersDefinition>
+    - m_cameraDefinitions : List<OptitrackCameraDefinition>
+    - m_forcePlateDefinitions : List<OptitrackForcePlateDefinition>
+    - m_latestRigidBodyStates : Dictionary<Int32, OptitrackRigidBodyState>
+    - m_latestSkeletonStates : Dictionary<Int32, OptitrackSkeletonState>
+    - m_latestMarkerStates : Dictionary<Int32, OptitrackMarkerState>
+    - m_rigidBodies : Dictionary<Int32, MonoBehaviour>
+    - m_skeletons : Dictionary<string, MonoBehaviour>
+    - m_latestMarkerSpheres : Dictionary<Int32, GameObject>
+    - m_frameDataUpdateLock : object
+    - Update() : void
+    + {static} FindDefaultClient() : OptitrackStreamingClient
+    + StartRecording() : bool
+    + StopRecording() : bool
+    + GetLatestRigidBodyState(rigidBodyId:Int32, networkCompensation:bool) : OptitrackRigidBodyState
+    + GetLatestSkeletonState(skeletonId:Int32) : OptitrackSkeletonState
+    + GetLatestMarkerStates() : List<OptitrackMarkerState>
+    + GetRigidBodyDefinitionById(rigidBodyId:Int32) : OptitrackRigidBodyDefinition
+    + GetSkeletonDefinitionByName(skeletonAssetName:string) : OptitrackSkeletonDefinition
+    + GetSkeletonDefinitionById(skeletonId:Int32) : OptitrackSkeletonDefinition
+    + UpdateDefinitions() : void
+    + RegisterRigidBody(component:MonoBehaviour, rigidBodyId:Int32) : void
+    + RegisterSkeleton(component:MonoBehaviour, name:string) : void
+    OnEnable() : void
+    OnDisable() : void
+    CheckConnectionHealth() : System.Collections.IEnumerator
+    - OnNatNetFrameReceived(sender:object, eventArgs:NatNetClient.NativeFrameReceivedEventArgs) : void
+    - GetMarkerName(marker:sMarker) : string
+    - RigidBodyDataToState(rbData:sRigidBodyData, timestamp:OptitrackHiResTimer.Timestamp, rbState:OptitrackRigidBodyState) : void
+    - ResetStreamingSubscriptions() : void
+    - SubscribeRigidBody(component:MonoBehaviour, rigidBodyId:Int32) : void
+    - SubscribeSkeleton(component:MonoBehaviour, name:string) : void
+    - SubscribeMarkers() : void
+    - GetOrCreateRigidBodyState(rigidBodyId:Int32) : OptitrackRigidBodyState
+    - GetOrCreateSkeletonState(skeletonId:Int32) : OptitrackSkeletonState
+    - GetOrCreateMarkerState(markerId:Int32) : OptitrackMarkerState
+    + _EnterFrameDataUpdateLock() : void
+    + _ExitFrameDataUpdateLock() : void
+}
+class MarkerDefinition {
+    + Position : Vector3
+    + RequiredLabel : Int32
+}
+class BoneDefinition {
+    + Id : Int32
+    + ParentId : Int32
+    + Name : string
+    + Offset : Vector3
+}
+class Timestamp <<struct>> {
+    <<internal>> m_ticks : Int64
+    + AgeSeconds : float <<get>>
+    + SecondsSince(reference:Timestamp) : float
+}
+enum ClientConnectionType {
+    Multicast,
+    Unicast,
+}
+MonoBehaviour <|-- OptitrackStreamingClient
+OptitrackRigidBodyDefinition +-- MarkerDefinition
+OptitrackSkeletonDefinition +-- BoneDefinition
+OptitrackHiResTimer +-- Timestamp
+OptitrackStreamingClient +-- ClientConnectionType
+@enduml

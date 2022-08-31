@@ -1,0 +1,8 @@
+@startuml
+class AddRigidBody {
+    +  <<event>> onRigidBodyAdded : RigidBodyAdded 
+    + AddRigidBody()
+}
+VisualElement <|-- AddRigidBody
+AddRigidBody --> "myButton" Button
+@enduml

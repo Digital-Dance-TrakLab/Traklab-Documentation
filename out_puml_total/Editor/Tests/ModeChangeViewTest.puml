@@ -1,0 +1,15 @@
+@startuml
+class ModeChangeViewTest {
+    window : EditorWindow
+    obj : GameObject
+    view : ModeChangeView
+    + Setup() : void
+    + TearDown() : void
+    + NoWarningBoxInEditMode() : IEnumerator
+    + WarningBoxInPlayMode() : IEnumerator
+}
+class TestWindow {
+}
+ModeChangeViewTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

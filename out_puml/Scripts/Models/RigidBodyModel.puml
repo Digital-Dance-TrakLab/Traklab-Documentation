@@ -1,0 +1,14 @@
+@startuml
+class RigidBodyModel {
+    + <<override>> OnChanged() : void
+    + loadDefaultAvatar() : void
+    + <<override>> CreateUI() : VisualElement
+    OnDrawGizmos() : void
+    # <<override>> Update() : void
+}
+Model <|-- RigidBodyModel
+RigidBodyModel --> "avatar" GameObject
+RigidBodyModel --> "previous_avatar" GameObject
+RigidBodyModel --> "actor" GameObject
+RigidBodyModel --> "rigidBodyName" Int32
+@enduml

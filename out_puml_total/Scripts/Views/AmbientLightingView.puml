@@ -1,0 +1,9 @@
+@startuml
+class AmbientLightingView {
+    - header : ComponentHeader
+    - color : ColorField
+    - selected : DropdownField
+    + AmbientLightingView(choices:List<string>, value:string)
+}
+VisualElement <|-- AmbientLightingView
+@enduml

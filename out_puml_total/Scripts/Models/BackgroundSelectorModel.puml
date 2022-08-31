@@ -1,0 +1,7 @@
+@startuml
+class BackgroundSelectorModel {
+    BackgroundSelectorModel()
+    + <<override>> CreateUI() : VisualElement
+}
+SelectorModel <|-- BackgroundSelectorModel
+@enduml

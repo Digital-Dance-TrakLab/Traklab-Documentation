@@ -1,0 +1,7 @@
+@startuml
+left to right direction
+
+!include ..\..\..\out_puml\Scripts\Models\MultiChildModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+
+@enduml

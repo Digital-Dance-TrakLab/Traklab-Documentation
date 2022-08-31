@@ -1,0 +1,6 @@
+@startuml
+class Utils {
+    + {static} ObjectExists(objectName:string) : GameObject
+    + {static} SetOrigin(go:GameObject, t:Type) : void
+}
+@enduml

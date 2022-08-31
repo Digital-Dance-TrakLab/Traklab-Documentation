@@ -1,0 +1,10 @@
+@startuml
+class CameraView {
+    - header : ComponentHeader
+    - xPosition : Slider
+    - yPosition : Slider
+    - stageDropDown : DropdownField
+    + CameraView(stages:List<string>)
+}
+VisualElement <|-- CameraView
+@enduml

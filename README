@@ -1,0 +1,31 @@
+
+## Files
+out_puml is the raw full generated plant uml files </br>
+out_puml_total is the raw generate plant uml files where associations have been omitted </br>
+puml_core is hand crafted as the final result of each diagram, this must be manually changed and update as the project changes</br>
+Images is the raw images that 
+
+## Generates out_puml
+
+Run this in the main project repo </br>
+Before running find and replace all "#if UNITY_EDITOR" inside the Assets folder with "#define UNITY_EDITOR \n #if UNITY_EDITOR"
+```
+puml-gen C:\Projects\unity\unity-extension\Assets\ C:\Projects\unity\unity-extension\out_puml -dir -createAssociation -excludePaths Assets\OptiTrack
+```
+
+## Generates out_puml_total
+Note this changes to all.puml might need to be made if new files are present
+Before running find and replace all "#if UNITY_EDITOR" inside the Assets folder with "#define UNITY_EDITOR \n #if UNITY_EDITOR"
+```
+puml-gen C:\Projects\unity\unity-extension\Assets\ C:\Projects\unity\unity-extension\out_puml_total -dir -excludePaths Assets\OptiTrack
+```
+
+## Generate Plant UML Images
+Install plant uml extension </br>
+1. right click on puml_core and click "Export Diagrams"
+2. right click on puml_core_total/all.puml and click "Export Diagram"
+
+## Generate csv table for confluence
+```
+python gen_table.py 
+```

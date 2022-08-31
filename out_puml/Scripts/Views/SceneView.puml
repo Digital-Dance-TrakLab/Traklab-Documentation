@@ -1,0 +1,9 @@
+@startuml
+class SceneView {
+    + SceneView()
+    + {static} getSceneRootFolderName() : List<string>
+}
+VisualElement <|-- SceneView
+SceneView --> "header" ComponentHeader
+SceneView --> "sceneDropDown" DropdownField
+@enduml

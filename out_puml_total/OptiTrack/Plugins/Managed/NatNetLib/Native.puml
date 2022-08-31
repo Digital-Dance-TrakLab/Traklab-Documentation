@@ -1,0 +1,249 @@
+@startuml
+class NatNetConstants <<static>> {
+    + <<const>> NatNetLibDllBaseName : string = "NatNetLib"
+    + <<const>> NatNetLibCallingConvention : CallingConvention
+    + <<const>> MaxModels : int = 2000
+    + <<const>> MaxMarkerSets : int = 1000
+    + <<const>> MaxRigidBodies : int = 1000
+    + <<const>> MaxNameLength : int = 256
+    + <<const>> MaxMarkers : int = 200
+    + <<const>> MaxRbMarkers : int = 20
+    + <<const>> MaxSkeletons : int = 100
+    + <<const>> MaxSkeletonRigidBodies : int = 200
+    + <<const>> MaxLabeledMarkers : int = 1000
+    + <<const>> MaxUnlabeledMarkers : int = 1000
+    + <<const>> MaxForcePlates : int = 32
+    + <<const>> MaxDevices : int = 32
+    + <<const>> MaxAnalogChannels : int = 32
+    + <<const>> MaxAnalogSubframes : int = 30
+    + <<const>> DefaultCommandPort : UInt16 = 1510
+    + <<const>> DefaultDataPort : UInt16 = 1511
+    + <<const>> Ipv4AddrStrLenMax : int = 16
+}
+enum NatNetError {
+    NatNetError_OK= 0,
+    NatNetError_Internal,
+    NatNetError_External,
+    NatNetError_Network,
+    NatNetError_Other,
+    NatNetError_InvalidArgument,
+    NatNetError_InvalidOperation,
+}
+enum NatNetConnectionType {
+    NatNetConnectionType_Multicast= 0,
+    NatNetConnectionType_Unicast,
+}
+enum NatNetDataDescriptionType {
+    NatNetDataDescriptionType_MarkerSet= 0,
+    NatNetDataDescriptionType_RigidBody,
+    NatNetDataDescriptionType_Skeleton,
+    NatNetDataDescriptionType_ForcePlate,
+    NatNetDataDescriptionType_Device,
+    NatNetDataDescriptionType_Camera,
+}
+enum NatNetVerbosity {
+    None= 0,
+    Debug,
+    Info,
+    Warning,
+    Error,
+}
+class MarkerDataVector <<struct>> {
+    + Values : float[]
+}
+class sServerDescription <<struct>> {
+    + HostPresent : bool
+    + HostComputerName : string
+    + HostComputerAddress : byte[]
+    + HostApp : string
+    + HostAppVersion : byte[]
+    + NatNetVersion : byte[]
+    + HighResClockFrequency : UInt64
+    + ConnectionInfoValid : bool
+    + ConnectionDataPort : UInt16
+    + ConnectionMulticast : bool
+    + ConnectionMulticastAddress : byte[]
+}
+class sDataDescriptions <<struct>> {
+    + DataDescriptionCount : Int32
+    + DataDescriptions : sDataDescription[]
+}
+class sDataDescription <<struct>> {
+    + DescriptionType : Int32
+    + Description : IntPtr
+}
+class sMarkerSetDescription <<struct>> {
+    + Name : string
+    + MarkerCount : Int32
+    + MarkerNames : IntPtr
+}
+class sRigidBodyDescription <<struct>> {
+    + Name : string
+    + Id : Int32
+    + ParentId : Int32
+    + OffsetX : float
+    + OffsetY : float
+    + OffsetZ : float
+    + MarkerCount : Int32
+    + MarkerPositions : IntPtr
+    + MarkerRequiredLabels : IntPtr
+    + MarkerNames : IntPtr
+}
+class sSkeletonDescription <<struct>> {
+    + Name : string
+    + Id : Int32
+    + RigidBodyCount : Int32
+    + RigidBodies : sRigidBodyDescription[]
+}
+class sChannelName <<struct>> {
+    - Value : string
+}
+class sForcePlateDescription <<struct>> {
+    + Id : Int32
+    + SerialNo : string
+    + Width : float
+    + Length : float
+    + OriginX : float
+    + OriginY : float
+    + OriginZ : float
+    + CalibrationMatrix : float[]
+    + Corners : float[]
+    + PlateType : Int32
+    + ChannelDataType : Int32
+    + ChannelCount : Int32
+    + ChannelNames : sChannelName[]
+}
+class sDeviceDescription <<struct>> {
+    + Id : Int32
+    + Name : string
+    + SerialNo : string
+    + DeviceType : Int32
+    + ChannelDataType : Int32
+    + ChannelCount : Int32
+    + ChannelNames : sChannelName[]
+}
+class sCameraDescription <<struct>> {
+    + Name : string
+    + PositionX : float
+    + PositionY : float
+    + PositionZ : float
+    + RotationX : float
+    + RotationY : float
+    + RotationZ : float
+    + RotationW : float
+}
+class sFrameOfMocapData <<struct>> {
+    + FrameNumber : Int32
+    + MarkerSetCount : Int32
+    + MarkerSets : sMarkerSetData[]
+    + OtherMarkerCount : Int32
+    + OtherMarkers : IntPtr
+    + RigidBodyCount : Int32
+    + RigidBodies : sRigidBodyData[]
+    + SkeletonCount : Int32
+    + Skeletons : sSkeletonData[]
+    + LabeledMarkerCount : Int32
+    + LabeledMarkers : sMarker[]
+    + ForcePlateCount : Int32
+    + ForcePlates : sForcePlateData[]
+    + DeviceCount : Int32
+    + Devices : sDeviceData[]
+    + Timecode : UInt32
+    + TimecodeSubframe : UInt32
+    + Timestamp : double
+    + CameraMidExposureTimestamp : UInt64
+    + CameraDataReceivedTimestamp : UInt64
+    + TransmitTimestamp : UInt64
+    + Params : Int16
+}
+class sMarkerSetData <<struct>> {
+    + Name : string
+    + MarkerCount : Int32
+    + Markers : IntPtr
+}
+class sRigidBodyData <<struct>> {
+    + Id : Int32
+    + X : float
+    + Y : float
+    + Z : float
+    + QX : float
+    + QY : float
+    + QZ : float
+    + QW : float
+    + MeanError : float
+    + Params : Int16
+}
+class sSkeletonData <<struct>> {
+    + Id : Int32
+    + RigidBodyCount : Int32
+    + RigidBodies : IntPtr
+}
+class sMarker <<struct>> {
+    + Id : Int32
+    + X : float
+    + Y : float
+    + Z : float
+    + Size : float
+    + Params : Int16
+}
+class sAnalogChannelData <<struct>> {
+    + FrameCount : Int32
+    + Values : float[]
+}
+class sForcePlateData <<struct>> {
+    + Id : Int32
+    + ChannelCount : Int32
+    + ChannelData : sAnalogChannelData[]
+    + Params : Int16
+}
+class sDeviceData <<struct>> {
+    + Id : Int32
+    + ChannelCount : Int32
+    + ChannelData : sAnalogChannelData[]
+    + Params : Int16
+}
+class sNatNetClientConnectParams <<struct>> {
+    + ConnectionType : NatNetConnectionType
+    + ServerCommandPort : UInt16
+    + ServerDataPort : UInt16
+    + ServerAddress : string
+    + LocalAddress : string
+    + MulticastAddress : string
+}
+class sNatNetDiscoveredServer <<struct>> {
+    + LocalAddress : string
+    + ServerAddress : string
+    + ServerCommandPort : UInt16
+    + ServerDescription : sServerDescription
+}
+class NativeMethods <<static>> {
+    + {static} <<extern>> NatNet_GetVersion(version:byte[]) : void
+    + {static} <<extern>> NatNet_DecodeID(compositeId:Int32, entityId:Int32, memberId:Int32) : void
+    + {static} <<extern>> NatNet_DecodeTimecode(compositeId:UInt32, timecodeSubframe:UInt32, pOutHour:Int32, pOutMinute:Int32, pOutSecond:Int32, pOutFrame:Int32, pOutSubFrame:Int32) : void
+    + {static} <<extern>> NatNet_SetLogCallback(pfnCallback:NatNetLogCallback) : void
+    + {static} <<extern>> NatNet_CreateAsyncServerDiscovery(discoveryHandle:IntPtr, pfnCallback:NatNetServerDiscoveryCallback, pUserContext:IntPtr, startImmediately:bool) : NatNetError
+    + {static} <<extern>> NatNet_AddDirectServerToAsyncDiscovery(discoveryHandle:IntPtr, serverAddress:string) : NatNetError
+    + {static} <<extern>> NatNet_StartAsyncDiscovery(discoveryHandle:IntPtr) : NatNetError
+    + {static} <<extern>> NatNet_FreeAsyncServerDiscovery(discoveryHandle:IntPtr) : NatNetError
+    + {static} <<extern>> NatNet_Client_Create(clientHandle:IntPtr) : NatNetError
+    + {static} <<extern>> NatNet_Client_Destroy(clientHandle:IntPtr) : NatNetError
+    + {static} <<extern>> NatNet_Client_Connect(clientHandle:IntPtr, connectParams:sNatNetClientConnectParams) : NatNetError
+    + {static} <<extern>> NatNet_Client_Disconnect(clientHandle:IntPtr) : NatNetError
+    + {static} <<extern>> NatNet_Client_SetFrameReceivedCallback(clientHandle:IntPtr, pfnDataCallback:NatNetFrameReceivedCallback) : NatNetError
+    + {static} <<extern>> NatNet_Client_Request(clientHandle:IntPtr, request:string, pResponse:IntPtr, pResponseLenBytes:Int32, timeoutMs:Int32, numAttempts:Int32) : NatNetError
+    + {static} <<extern>> NatNet_Client_GetServerDescription(clientHandle:IntPtr, serverDescription:sServerDescription) : NatNetError
+    + {static} <<extern>> NatNet_Client_GetDataDescriptionList(clientHandle:IntPtr, pDataDescriptions:IntPtr, descriptionTypesMask:UInt32) : NatNetError
+    + {static} <<extern>> NatNet_Client_SecondsSinceHostTimestamp(clientHandle:IntPtr, inTimestamp:UInt64, pOutTimeElapsed:double) : NatNetError
+    + {static} <<extern>> NatNet_Client_GetPredictedRigidBodyPose(client:IntPtr, rigidBodyIndex:Int32, rigidBodyData:sRigidBodyData, dt:double) : NatNetError
+    + {static} <<extern>> NatNet_Frame_GetTimecode(pFrameOfMocapData:IntPtr, timecode:UInt32, timecodeSubframe:UInt32) : NatNetError
+    + {static} <<extern>> NatNet_Frame_GetRigidBodyCount(pFrameOfMocapData:IntPtr, rigidBodyCount:Int32) : NatNetError
+    + {static} <<extern>> NatNet_Frame_GetRigidBody(pFrameOfMocapData:IntPtr, rigidBodyIndex:Int32, rigidBodyData:sRigidBodyData) : NatNetError
+    + {static} <<extern>> NatNet_Frame_GetSkeletonCount(pFrameOfMocapData:IntPtr, skeletonCount:Int32) : NatNetError
+    + {static} <<extern>> NatNet_Frame_Skeleton_GetId(pFrameOfMocapData:IntPtr, skeletonIndex:Int32, skeletonId:Int32) : NatNetError
+    + {static} <<extern>> NatNet_Frame_Skeleton_GetRigidBodyCount(pFrameOfMocapData:IntPtr, skeletonIndex:Int32, rigidBodyCount:Int32) : NatNetError
+    + {static} <<extern>> NatNet_Frame_Skeleton_GetRigidBody(pFrameOfMocapData:IntPtr, skeletonIndex:Int32, rigidBodyIndex:Int32, rigidBodyData:sRigidBodyData) : NatNetError
+    + {static} <<extern>> NatNet_Frame_GetTransmitTimestamp(pFrameOfMocapData:IntPtr, pOutTransmitTimestamp:UInt64) : NatNetError
+    + {static} <<extern>> NatNet_Frame_GetLabeledMarkerCount(pFrameOfMocapData:IntPtr, labeledMarkerCount:Int32) : NatNetError
+    + {static} <<extern>> NatNet_Frame_GetLabeledMarker(pFrameOfMocapData:IntPtr, labeledMarkerIndex:Int32, labeledMarkerData:sMarker) : NatNetError
+}
+@enduml

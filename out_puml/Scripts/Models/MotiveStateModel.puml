@@ -1,0 +1,17 @@
+@startuml
+class MotiveStateModel {
+    - interval : int = 100000
+    - timeElapsed : float = 0
+    Start() : void
+    Update() : void
+    - ConnectToMotive(active_client:OptitrackStreamingClient) : NatNetClient
+    - setSkeletonNames(skeletonList:List<sSkeletonDescription>) : List<string>
+    + setSkeletonNamesTest(skeletonList:List<string>) : void
+    + UpdateMotiveActorList() : List<string>
+}
+class "List`1"<T> {
+}
+MonoBehaviour <|-- MotiveStateModel
+MotiveStateModel --> "MotiveState" MotiveStateModel
+MotiveStateModel o-> "skeletonNames<string>" "List`1"
+@enduml

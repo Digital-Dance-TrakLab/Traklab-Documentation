@@ -1,0 +1,8 @@
+@startuml
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\AmbientLightingModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Views\AmbientLightingView.puml
+
+AmbientLightingModel -[dotted]-> AmbientLightingView : creates
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class ObjectSearchView {
+    parentName : string
+    + ObjectSearchView(parentName:string)
+}
+SearchBoxView <|-- ObjectSearchView
+@enduml

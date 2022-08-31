@@ -1,0 +1,14 @@
+@startuml
+class ThreePointLightModel {
+    + angle : float = 90
+    + leftLightColour : Color
+    + rightLightColour : Color
+    + frontLightColour : Color
+    - GetByName(name:string) : GameObject
+    - DestroyAllWithNameExcept(name:string, exempt:GameObject) : void
+    configLight(name:string, c:Color, p:Vector3) : void
+    + <<override>> OnChanged() : void
+    + <<override>> CreateUI() : VisualElement
+}
+Model <|-- ThreePointLightModel
+@enduml

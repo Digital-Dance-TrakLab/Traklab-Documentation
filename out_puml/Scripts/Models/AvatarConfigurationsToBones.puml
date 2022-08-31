@@ -1,0 +1,12 @@
+@startuml
+class AvatarConfigurationsToBones {
+    AvatarConfigurationsToBones()
+    + {static} Instance() : AvatarConfigurationsToBones
+    + GetConfig() : Dictionary<string, List<HumanBodyBones>>
+    + Default() : string
+}
+class "Dictionary`2"<T1,T2> {
+}
+AvatarConfigurationsToBones --> "instance" AvatarConfigurationsToBones
+AvatarConfigurationsToBones --> "configToBones<string,List<HumanBodyBones>>" "Dictionary`2"
+@enduml

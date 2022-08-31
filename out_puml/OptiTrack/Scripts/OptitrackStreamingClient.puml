@@ -1,0 +1,151 @@
+@startuml
+enum OptitrackBoneNameConvention {
+    Motive,
+    FBX,
+    BVH,
+}
+enum StreamingCoordinatesValues {
+    Local,
+    Global,
+}
+class OptitrackPose {
+}
+class OptitrackMarkerState {
+    + Name : string
+    + Size : float
+    + Labeled : bool
+    + IsActive : bool
+}
+class OptitrackRigidBodyState {
+}
+class OptitrackSkeletonState {
+}
+class OptitrackRigidBodyDefinition {
+    + Name : string
+}
+class OptitrackSkeletonDefinition {
+    + Name : string
+}
+class OptitrackMarkersDefinition {
+    + Name : string
+}
+class OptitrackForcePlateDefinition {
+    + SerialNumber : string
+    + Width : float
+    + Length : float
+}
+class OptitrackCameraDefinition {
+    + Name : string
+}
+class OptitrackHiResTimer <<static>> {
+    + {static} Now() : Timestamp
+}
+class OptitrackStreamingClient {
+    + ServerAddress : string = "127.0.0.1"
+    + LocalAddress : string = "127.0.0.1"
+    + DrawMarkers : bool = false
+    + DrawCameras : bool = false
+    + DrawForcePlates : bool = false
+    + RecordOnPlay : bool = false
+    + SkipDataDescriptions : bool = false
+    - m_doneSubscriptionNotice : bool = false
+    - m_receivedFrameSinceConnect : bool = false
+    - m_hasDrawnCameras : bool = false
+    - m_hasDrawnForcePlates : bool = false
+    - m_frameDataUpdateLock : object
+    - Update() : void
+    + {static} FindDefaultClient() : OptitrackStreamingClient
+    + StartRecording() : bool
+    + StopRecording() : bool
+    + GetLatestRigidBodyState(rigidBodyId:Int32, networkCompensation:bool) : OptitrackRigidBodyState
+    + GetLatestSkeletonState(skeletonId:Int32) : OptitrackSkeletonState
+    + GetLatestMarkerStates() : List<OptitrackMarkerState>
+    + GetRigidBodyDefinitionById(rigidBodyId:Int32) : OptitrackRigidBodyDefinition
+    + GetSkeletonDefinitionByName(skeletonAssetName:string) : OptitrackSkeletonDefinition
+    + GetSkeletonDefinitionById(skeletonId:Int32) : OptitrackSkeletonDefinition
+    + UpdateDefinitions() : void
+    + RegisterRigidBody(component:MonoBehaviour, rigidBodyId:Int32) : void
+    + RegisterSkeleton(component:MonoBehaviour, name:string) : void
+    OnEnable() : void
+    OnDisable() : void
+    CheckConnectionHealth() : System.Collections.IEnumerator
+    - OnNatNetFrameReceived(sender:object, eventArgs:NatNetClient.NativeFrameReceivedEventArgs) : void
+    - GetMarkerName(marker:sMarker) : string
+    - RigidBodyDataToState(rbData:sRigidBodyData, timestamp:OptitrackHiResTimer.Timestamp, rbState:OptitrackRigidBodyState) : void
+    - ResetStreamingSubscriptions() : void
+    - SubscribeRigidBody(component:MonoBehaviour, rigidBodyId:Int32) : void
+    - SubscribeSkeleton(component:MonoBehaviour, name:string) : void
+    - SubscribeMarkers() : void
+    - GetOrCreateRigidBodyState(rigidBodyId:Int32) : OptitrackRigidBodyState
+    - GetOrCreateSkeletonState(skeletonId:Int32) : OptitrackSkeletonState
+    - GetOrCreateMarkerState(markerId:Int32) : OptitrackMarkerState
+    + _EnterFrameDataUpdateLock() : void
+    + _ExitFrameDataUpdateLock() : void
+}
+class "Dictionary`2"<T1,T2> {
+}
+class MarkerDefinition {
+}
+class "List`1"<T> {
+}
+class BoneDefinition {
+    + Name : string
+}
+class Timestamp <<struct>> {
+    + AgeSeconds : float <<get>>
+    + SecondsSince(reference:Timestamp) : float
+}
+enum ClientConnectionType {
+    Multicast,
+    Unicast,
+}
+OptitrackPose --> "Position" Vector3
+OptitrackPose --> "Orientation" Quaternion
+OptitrackMarkerState --> "Position" Vector3
+OptitrackMarkerState --> "Id" Int32
+OptitrackRigidBodyState --> "Pose" OptitrackPose
+OptitrackSkeletonState --> "BonePoses<Int32,OptitrackPose>" "Dictionary`2"
+OptitrackSkeletonState --> "LocalBonePoses<Int32,OptitrackPose>" "Dictionary`2"
+OptitrackRigidBodyDefinition --> "Id" Int32
+OptitrackRigidBodyDefinition --> "Markers<MarkerDefinition>" "List`1"
+OptitrackSkeletonDefinition --> "Id" Int32
+OptitrackSkeletonDefinition --> "Bones<BoneDefinition>" "List`1"
+OptitrackSkeletonDefinition --> "BoneIdToParentIdMap<Int32,Int32>" "Dictionary`2"
+OptitrackForcePlateDefinition --> "Id" Int32
+OptitrackForcePlateDefinition --> "ElectricalOffset" Vector3
+OptitrackForcePlateDefinition --> "CalibrationMatrix<float>" "List`1"
+OptitrackForcePlateDefinition --> "Corners<float>" "List`1"
+OptitrackForcePlateDefinition --> "PlateType" Int32
+OptitrackForcePlateDefinition --> "ChannelDataType" Int32
+OptitrackForcePlateDefinition --> "ChannelCount" Int32
+OptitrackForcePlateDefinition --> "ChannelNames<string>" "List`1"
+OptitrackCameraDefinition --> "Position" Vector3
+OptitrackCameraDefinition --> "Orientation" Quaternion
+MonoBehaviour <|-- OptitrackStreamingClient
+OptitrackStreamingClient --> "ConnectionType" ClientConnectionType
+OptitrackStreamingClient o-> "SkeletonCoordinates" StreamingCoordinatesValues
+OptitrackStreamingClient o-> "BoneNamingConvention" OptitrackBoneNameConvention
+OptitrackStreamingClient o-> "m_connectionHealthCoroutine" Coroutine
+OptitrackStreamingClient --> "m_client" NatNetClient
+OptitrackStreamingClient o-> "m_rigidBodyDefinitions<OptitrackRigidBodyDefinition>" "List`1"
+OptitrackStreamingClient o-> "m_skeletonDefinitions<OptitrackSkeletonDefinition>" "List`1"
+OptitrackStreamingClient o-> "m_markersDefinitions<OptitrackMarkersDefinition>" "List`1"
+OptitrackStreamingClient o-> "m_cameraDefinitions<OptitrackCameraDefinition>" "List`1"
+OptitrackStreamingClient o-> "m_forcePlateDefinitions<OptitrackForcePlateDefinition>" "List`1"
+OptitrackStreamingClient o-> "m_latestRigidBodyStates<Int32,OptitrackRigidBodyState>" "Dictionary`2"
+OptitrackStreamingClient o-> "m_latestSkeletonStates<Int32,OptitrackSkeletonState>" "Dictionary`2"
+OptitrackStreamingClient o-> "m_latestMarkerStates<Int32,OptitrackMarkerState>" "Dictionary`2"
+OptitrackStreamingClient o-> "m_rigidBodies<Int32,MonoBehaviour>" "Dictionary`2"
+OptitrackStreamingClient o-> "m_skeletons<string,MonoBehaviour>" "Dictionary`2"
+OptitrackStreamingClient o-> "m_latestMarkerSpheres<Int32,GameObject>" "Dictionary`2"
+OptitrackRigidBodyDefinition +-- MarkerDefinition
+MarkerDefinition --> "Position" Vector3
+MarkerDefinition --> "RequiredLabel" Int32
+OptitrackSkeletonDefinition +-- BoneDefinition
+BoneDefinition --> "Id" Int32
+BoneDefinition --> "ParentId" Int32
+BoneDefinition --> "Offset" Vector3
+OptitrackHiResTimer +-- Timestamp
+Timestamp --> "m_ticks" Int64
+OptitrackStreamingClient +-- ClientConnectionType
+@enduml

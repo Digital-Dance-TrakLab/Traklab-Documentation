@@ -1,0 +1,9 @@
+@startuml
+class SkyboxSelection {
+    + SkyboxSelection()
+    + {static} getSkyboxRootFolderName() : List<string>
+}
+VisualElement <|-- SkyboxSelection
+SkyboxSelection --> "header" ComponentHeader
+SkyboxSelection --> "skyboxDropDown" DropdownField
+@enduml

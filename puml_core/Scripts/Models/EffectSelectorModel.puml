@@ -1,0 +1,14 @@
+@startuml
+
+
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\EffectSelectorModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Models\SelectorModel.puml
+!include ..\..\..\out_puml\Scripts\Views\EffectSelector.puml
+
+EffectSelectorModel -[dotted]-> EffectSelector : creates
+
+
+
+@enduml

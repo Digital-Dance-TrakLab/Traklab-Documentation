@@ -1,0 +1,9 @@
+@startuml
+class ActorView {
+    label : ComponentHeader
+    objectField : ObjectSelectionOption
+    skeletonName : DropdownField
+    + ActorView()
+}
+VisualElement <|-- ActorView
+@enduml

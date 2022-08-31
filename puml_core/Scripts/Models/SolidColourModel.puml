@@ -1,0 +1,10 @@
+@startuml
+
+
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\SolidColourModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Views\SolidLightView.puml
+
+SolidColourModel -[dotted]-> SolidLightView : creates
+@enduml

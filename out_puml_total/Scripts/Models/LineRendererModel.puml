@@ -1,0 +1,13 @@
+@startuml
+class LineRendererModel {
+    + lineRendererColor : Color
+    + endColor : Color
+    + thickness : float = 0.1f
+    + lifespan : float = 1
+    + <<override>> ChildSpawned(go:GameObject) : GameObject
+    + <<override>> GetAvatar() : GameObject
+    + <<override>> ChangeBase(go:GameObject) : void
+    + <<override>> CreateUI() : VisualElement
+}
+MultiChildModel <|-- LineRendererModel
+@enduml

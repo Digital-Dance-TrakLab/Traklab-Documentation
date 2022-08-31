@@ -1,0 +1,20 @@
+@startuml
+class SearchBoxViewTest {
+    + Setup() : void
+    + TearDown() : void
+    - CreateGameObject(name:string) : GameObject
+    + InvokeSelectedTest() : IEnumerator
+    + AddAndDeleteGameObjectFromRightTest() : IEnumerator
+    + AddAndDeleteGameObjectFromLeftTest() : IEnumerator
+    + AddGameObjectTest() : IEnumerator
+    + AddActorTest() : IEnumerator
+    + RemoveGameObjectTest() : IEnumerator
+}
+class TestWindow {
+}
+SearchBoxViewTest --> "window" EditorWindow
+SearchBoxViewTest --> "model" SunLightModel
+SearchBoxViewTest --> "view" SearchBoxView
+SearchBoxViewTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

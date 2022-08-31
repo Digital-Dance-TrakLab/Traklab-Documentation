@@ -1,0 +1,16 @@
+@startuml
+class MotiveStateModelTest {
+    window : EditorWindow
+    scene : GameObject
+    model : MotiveStateModel
+    view : ActorView
+    + Setup() : void
+    + TearDown() : void
+    + NullIfCantConnectToMotive() : IEnumerator
+    + GetSkeletonName() : IEnumerator
+}
+class TestWindow {
+}
+MotiveStateModelTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

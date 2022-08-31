@@ -1,0 +1,39 @@
+@startuml
+
+frame EditorWindows{
+    class SceneEditor
+}
+
+
+frame Unity {
+    class GameObject
+    class MonoBehaviour
+    class VisualElement
+}
+
+
+frame Models{
+    class Model
+    class OnChanged
+}
+
+frame Views  {
+    class ModeChangeView
+    class ObjectView
+}
+
+!include ..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\out_puml\Scripts\Models\OnChanged.puml
+!include ..\..\out_puml\Scripts\Views\ObjectView.puml
+!include ..\..\out_puml\Editor\SceneEditor.puml
+
+GameObject --> "*" MonoBehaviour : contains 
+ObjectView -[dotted]-> OnChanged : subcribes
+Model -[dotted]-> OnChanged : publishes
+
+skinparam nodesep 100
+
+remove List`1
+OnChanged --> "*" Model : "models, actives, deactives"
+
+@enduml

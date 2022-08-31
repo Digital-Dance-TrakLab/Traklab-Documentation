@@ -1,0 +1,8 @@
+@startuml
+class EffectSelector {
+    + EffectSelector(labelName:string, choices:List<string>, choice:string)
+}
+VisualElement <|-- EffectSelector
+EffectSelector --> "header" ComponentHeader
+EffectSelector --> "selected" DropdownField
+@enduml

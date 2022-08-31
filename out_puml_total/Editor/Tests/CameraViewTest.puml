@@ -1,0 +1,21 @@
+@startuml
+class CameraViewTest {
+    window : EditorWindow
+    go : GameObject
+    model : CameraModel
+    view : CameraView
+    mainCamera : Camera
+    + Setup() : void
+    + TearDown() : void
+    + CanMoveHorizentally() : IEnumerator
+    + CanMoveVertically() : IEnumerator
+    + LootAtForward() : IEnumerator
+    + LootAtLeft() : IEnumerator
+    + LootAtCenter() : IEnumerator
+    + LootAtRight() : IEnumerator
+}
+class TestWindow {
+}
+CameraViewTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

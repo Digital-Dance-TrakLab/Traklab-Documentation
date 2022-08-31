@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="97px" preserveAspectRatio="none" style="width:253px;height:97px;background:#FFFFFF;" version="1.1" viewBox="0 0 253 97" width="253px" zoomAndPan="magnify"><defs/><g><!--MD5=[d4861eab20a1e9c81da0ea51ade735e0]
+class RandomNameGenerator--><g id="elem_RandomNameGenerator"><rect codeLine="1" fill="#F1F1F1" height="76.3125" id="RandomNameGenerator" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="232" x="7" y="7"/><ellipse cx="42.7" cy="28.3516" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M45.4656,24.2266 Q45.6219,24.0078 45.8094,23.8984 Q45.9969,23.7891 46.2156,23.7891 Q46.5906,23.7891 46.825,24.0547 Q47.0594,24.3047 47.0594,24.9141 L47.0594,26.3672 Q47.0594,26.9766 46.825,27.2422 Q46.5906,27.5078 46.2156,27.5078 Q45.8719,27.5078 45.6688,27.3047 Q45.4656,27.1172 45.3563,26.6016 Q45.3094,26.2422 45.1219,26.0547 Q44.7938,25.6797 44.1844,25.4609 Q43.575,25.2422 42.95,25.2422 Q42.1844,25.2422 41.5438,25.5703 Q40.9188,25.8984 40.4188,26.6484 Q39.9344,27.3984 39.9344,28.4297 L39.9344,29.5234 Q39.9344,30.7578 40.825,31.5859 Q41.7156,32.3984 43.3094,32.3984 Q44.2469,32.3984 44.9031,32.1484 Q45.2938,31.9922 45.7156,31.5547 Q45.9813,31.2891 46.1219,31.2109 Q46.2781,31.1328 46.4813,31.1328 Q46.8094,31.1328 47.0594,31.3984 Q47.325,31.6484 47.325,31.9922 Q47.325,32.3359 46.9813,32.7422 Q46.4813,33.3203 45.6844,33.6484 Q44.6063,34.1016 43.3094,34.1016 Q41.7938,34.1016 40.5906,33.4766 Q39.6063,32.9766 38.9188,31.9141 Q38.2313,30.8359 38.2313,29.5547 L38.2313,28.3984 Q38.2313,27.0703 38.8406,25.9297 Q39.4656,24.7734 40.5594,24.1641 Q41.6531,23.5391 42.8875,23.5391 Q43.6219,23.5391 44.2625,23.7109 Q44.9188,23.8672 45.4656,24.2266 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="117.3" y="24.457">«static»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="61.3" y="41.627">RandomNameGenerator</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="238" y1="49.7031" y2="49.7031"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="238" y1="57.7031" y2="57.7031"/><ellipse cx="18" cy="68.7031" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="206" x="27" y="76.2363">GenerateRandomName() : string</text></g><!--MD5=[4850e7c7b55cee5592bedcd48a5bfdbf]
+@startuml
+!include ..\..\..\out_puml\Scripts\Utility\RandomNameGenerator.puml
+@enduml
+
+@startuml
+class RandomNameGenerator <<static>> {
+    + {static} GenerateRandomName() : string
+}
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 20:55:52 AEST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: AU
+--></g></svg>

@@ -1,0 +1,15 @@
+@startuml
+class SceneModelTest {
+    + Setup() : void
+    + TearDown() : void
+    + AvailableSceneCanBeSet() : IEnumerator
+}
+class TestWindow {
+}
+SceneModelTest --> "window" EditorWindow
+SceneModelTest --> "scene" GameObject
+SceneModelTest --> "model" SceneModel
+SceneModelTest --> "view" SceneView
+SceneModelTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

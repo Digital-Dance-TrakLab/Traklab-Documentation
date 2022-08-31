@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="97px" preserveAspectRatio="none" style="width:303px;height:97px;background:#FFFFFF;" version="1.1" viewBox="0 0 303 97" width="303px" zoomAndPan="magnify"><defs/><g><!--MD5=[d6a8c88f367dcacc6d89cf58e435822e]
+class StringUtility--><g id="elem_StringUtility"><rect codeLine="1" fill="#F1F1F1" height="76.3125" id="StringUtility" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="282" x="7" y="7"/><ellipse cx="108.75" cy="28.3516" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M111.5156,24.2266 Q111.6719,24.0078 111.8594,23.8984 Q112.0469,23.7891 112.2656,23.7891 Q112.6406,23.7891 112.875,24.0547 Q113.1094,24.3047 113.1094,24.9141 L113.1094,26.3672 Q113.1094,26.9766 112.875,27.2422 Q112.6406,27.5078 112.2656,27.5078 Q111.9219,27.5078 111.7188,27.3047 Q111.5156,27.1172 111.4063,26.6016 Q111.3594,26.2422 111.1719,26.0547 Q110.8438,25.6797 110.2344,25.4609 Q109.625,25.2422 109,25.2422 Q108.2344,25.2422 107.5938,25.5703 Q106.9688,25.8984 106.4688,26.6484 Q105.9844,27.3984 105.9844,28.4297 L105.9844,29.5234 Q105.9844,30.7578 106.875,31.5859 Q107.7656,32.3984 109.3594,32.3984 Q110.2969,32.3984 110.9531,32.1484 Q111.3438,31.9922 111.7656,31.5547 Q112.0313,31.2891 112.1719,31.2109 Q112.3281,31.1328 112.5313,31.1328 Q112.8594,31.1328 113.1094,31.3984 Q113.375,31.6484 113.375,31.9922 Q113.375,32.3359 113.0313,32.7422 Q112.5313,33.3203 111.7344,33.6484 Q110.6563,34.1016 109.3594,34.1016 Q107.8438,34.1016 106.6406,33.4766 Q105.6563,32.9766 104.9688,31.9141 Q104.2813,30.8359 104.2813,29.5547 L104.2813,28.3984 Q104.2813,27.0703 104.8906,25.9297 Q105.5156,24.7734 106.6094,24.1641 Q107.7031,23.5391 108.9375,23.5391 Q109.6719,23.5391 110.3125,23.7109 Q110.9688,23.8672 111.5156,24.2266 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="143.25" y="24.457">«static»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="129.25" y="41.627">StringUtility</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="288" y1="49.7031" y2="49.7031"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="288" y1="57.7031" y2="57.7031"/><ellipse cx="18" cy="68.7031" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="256" x="27" y="76.2363">FirstLetterToUpperCase(s:string) : string</text></g><!--MD5=[009e765a7ec969ff333943570e6e0964]
+@startuml
+!include ..\..\..\out_puml\Scripts\Utility\StringUtility.puml
+@enduml
+
+@startuml
+class StringUtility <<static>> {
+    + {static} FirstLetterToUpperCase(s:string) : string
+}
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 20:55:52 AEST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: AU
+--></g></svg>

@@ -1,0 +1,17 @@
+@startuml
+class SolidLightViewTest {
+    window : EditorWindow
+    go : GameObject
+    model : SolidColourModel
+    view : SolidLightView
+    mainCamera : Camera
+    + Setup() : void
+    + TearDown() : void
+    + LabelCanBeSeen() : IEnumerator
+    + ColorCanBeSet() : IEnumerator
+}
+class TestWindow {
+}
+SolidLightViewTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

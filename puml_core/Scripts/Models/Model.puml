@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Models\OnChanged.puml
+
+
+Model -[dotted]-> VisualElement : creates
+Model -[dotted]-> OnChanged : publishes
+
+@enduml

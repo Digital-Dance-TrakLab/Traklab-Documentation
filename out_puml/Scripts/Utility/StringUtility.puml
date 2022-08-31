@@ -1,0 +1,5 @@
+@startuml
+class StringUtility <<static>> {
+    + {static} FirstLetterToUpperCase(s:string) : string
+}
+@enduml

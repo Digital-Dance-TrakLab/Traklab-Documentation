@@ -1,0 +1,13 @@
+@startuml
+class LightSelection {
+    + LightSelection(choices:List<string>)
+}
+enum lightingMode {
+    solidLight,
+    sunlight,
+}
+VisualElement <|-- LightSelection
+LightSelection --> "label" Label
+LightSelection --> "selected" DropdownField
+LightSelection +-- lightingMode
+@enduml

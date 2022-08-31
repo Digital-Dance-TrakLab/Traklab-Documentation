@@ -1,0 +1,9 @@
+@startuml
+class RigidBodyView {
+    + RigidBodyView()
+}
+VisualElement <|-- RigidBodyView
+RigidBodyView --> "header" ComponentHeader
+RigidBodyView --> "objectField" ObjectSelectionOption
+RigidBodyView --> "skeletonName" TextField
+@enduml

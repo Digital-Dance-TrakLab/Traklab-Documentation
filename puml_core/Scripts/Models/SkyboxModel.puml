@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\SkyboxModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Views\SkyboxSelection.puml
+
+SkyboxModel -[dotted]-> SkyboxSelection : creates
+@enduml

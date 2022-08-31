@@ -1,0 +1,20 @@
+@startuml
+class ObjectSelectionOption {
+    popUp : PopUp
+    + ObjectSelectionOption(filters:string, searchInFolders:string[])
+}
+class PopUp {
+    - selector : ObjectSelectionPopUp
+    + SetSelector(selector:ObjectSelectionPopUp) : void
+    + {static} ShowPop(name:string) : PopUp
+    OnLostFocus() : void
+}
+class ObjectSelectionPopUp {
+    + ObjectSelectionPopUp(filters:string, searchInFolders:string[])
+}
+ObjectField <|-- ObjectSelectionOption
+ObjectSelectionOption +-- PopUp
+EditorWindow <|-- PopUp
+ObjectSelectionOption +-- ObjectSelectionPopUp
+SearchBoxView <|-- ObjectSelectionPopUp
+@enduml

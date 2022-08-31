@@ -1,0 +1,12 @@
+@startuml
+class SceneModel {
+    + fileName : string
+    + oldScene : string
+    getDefault() : string
+    + <<override>> Start() : void
+    + <<override>> OnChanged() : void
+    + <<override>> CreateUI() : VisualElement
+}
+Model <|-- SceneModel
+SceneModel --> "scene" Scene
+@enduml

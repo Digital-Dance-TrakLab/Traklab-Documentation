@@ -1,0 +1,6 @@
+@startuml
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\MotiveConnectModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+
+@enduml

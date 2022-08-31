@@ -1,0 +1,9 @@
+@startuml
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\ParticleModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Models\MultiChildModel.puml
+!include ..\..\..\out_puml\Scripts\Views\ParticleView.puml
+
+ParticleModel -[dotted]-> ParticleView : creates
+@enduml

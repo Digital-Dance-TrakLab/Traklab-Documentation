@@ -1,0 +1,17 @@
+@startuml
+class OnChanged {
+    +  <<event>> onActivated : ModelChanged 
+    +  <<event>> onDeactivated : ModelChanged 
+    +  <<event>> onChanged : ModelChanged 
+    LateUpdate() : void
+    + Changed(model:Model) : void
+    + Active(model:Model) : void
+    + Deactives(model:Model) : void
+}
+class "List`1"<T> {
+}
+MonoBehaviour <|-- OnChanged
+OnChanged o-> "actives<Model>" "List`1"
+OnChanged o-> "deactives<Model>" "List`1"
+OnChanged o-> "models<Model>" "List`1"
+@enduml

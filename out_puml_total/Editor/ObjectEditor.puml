@@ -1,0 +1,19 @@
+@startuml
+class ObjectEditor {
+    + {static} ShowExample() : void
+    - objectView : ObjectView
+    - searchBox : ObjectSearchView
+    - addActor : AddActor
+    - addRigidBody : AddRigidBody
+    - modeChangeView : ModeChangeView
+    - actorsHeader : ComponentHeader
+    + InitView() : void
+    + Init() : void
+    + Callback(scene:Scene, mode:OpenSceneMode) : void
+    - Callback2(scene:Scene, setup:NewSceneSetup, mode:NewSceneMode) : void
+    - Callback3(scene:Scene, scene1:Scene) : void
+    + OnEnable() : void
+    + OnDisable() : void
+}
+EditorWindow <|-- ObjectEditor
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class SolidLightModelTest {
+    + Setup() : void
+    + TearDown() : void
+    + ModelSetsCameraBackground() : IEnumerator
+}
+SolidLightModelTest --> "go" GameObject
+SolidLightModelTest --> "model" SolidColourModel
+SolidLightModelTest --> "mainCamera" Camera
+@enduml

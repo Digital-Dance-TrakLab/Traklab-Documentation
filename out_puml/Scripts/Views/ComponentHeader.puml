@@ -1,0 +1,7 @@
+@startuml
+class ComponentHeader {
+    + ComponentHeader(title:string)
+}
+VisualElement <|-- ComponentHeader
+ComponentHeader --> "label" Label
+@enduml

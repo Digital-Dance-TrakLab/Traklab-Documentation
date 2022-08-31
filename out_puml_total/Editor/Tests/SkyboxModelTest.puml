@@ -1,0 +1,17 @@
+@startuml
+class SkyboxModelTest {
+    window : EditorWindow
+    go : GameObject
+    model : SkyboxModel
+    view : SkyboxSelection
+    initialSkybox : Material
+    + Setup() : void
+    + TearDown() : void
+    + SetSkyBox() : IEnumerator
+    + UpdateSkyBox() : IEnumerator
+}
+class TestWindow {
+}
+SkyboxModelTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

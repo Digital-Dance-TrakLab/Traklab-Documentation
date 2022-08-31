@@ -1,0 +1,5 @@
+@startuml
+class RandomNameGenerator <<static>> {
+    + {static} GenerateRandomName() : string
+}
+@enduml

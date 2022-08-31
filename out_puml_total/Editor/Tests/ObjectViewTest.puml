@@ -1,0 +1,22 @@
+@startuml
+class ObjectViewTest {
+    window : EditorWindow
+    obj : GameObject
+    view : ObjectView
+    + Setup() : void
+    + TearDown() : void
+    + SelectEnabledModel() : IEnumerator
+    + SelectingDisabledModel() : IEnumerator
+    + EnablingDisabledModelAddsToView() : IEnumerator
+    + DisablingEnabledModelAddsToView() : IEnumerator
+}
+class TestWindow {
+}
+class dummyModel {
+    + <<override>> CreateUI() : VisualElement
+}
+ObjectViewTest +-- TestWindow
+EditorWindow <|-- TestWindow
+ObjectViewTest +-- dummyModel
+Model <|-- dummyModel
+@enduml

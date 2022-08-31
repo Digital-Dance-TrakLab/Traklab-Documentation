@@ -1,0 +1,5 @@
+@startuml
+!include ..\..\..\out_puml\Scripts\Views\AmbientLightingView.puml
+
+
+@enduml

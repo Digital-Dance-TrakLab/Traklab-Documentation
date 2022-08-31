@@ -1,0 +1,9 @@
+@startuml
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\ActorModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Views\ActorView.puml
+
+
+ActorModel -[dotted]-> ActorView : creates
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class LightingModelTest {
+    + Setup() : void
+    + TearDown() : void
+    + SunLightModeModelUpdate() : IEnumerator
+    + SolidLightModeModelUpdate() : IEnumerator
+}
+LightingModelTest --> "go" GameObject
+LightingModelTest --> "model" LightingModel
+@enduml

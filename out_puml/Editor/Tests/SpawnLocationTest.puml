@@ -1,0 +1,10 @@
+@startuml
+class SpawnLocationTest {
+    + Setup() : void
+    + TearDown() : void
+    + SingleActorSpawnsAtOrigin() : IEnumerator
+    + TwoActorsSpawnUpdatesCorrectly() : IEnumerator
+}
+SpawnLocationTest --> "origin" GameObject
+SpawnLocationTest --> "spawnLocation" SpawnLocation
+@enduml

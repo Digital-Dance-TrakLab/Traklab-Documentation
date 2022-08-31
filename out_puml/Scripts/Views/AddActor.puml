@@ -1,0 +1,8 @@
+@startuml
+class AddActor {
+    +  <<event>> onActorAdded : ActorAdded 
+    + AddActor()
+}
+VisualElement <|-- AddActor
+AddActor --> "myButton" Button
+@enduml

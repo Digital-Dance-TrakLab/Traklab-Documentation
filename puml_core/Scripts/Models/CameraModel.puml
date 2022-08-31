@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\CameraModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Views\CameraView.puml
+
+CameraModel -[dotted]-> CameraView : creates
+
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+class SceneEditor {
+    - scene : GameObject
+    + {static} ShowExample() : void
+    - InitSceneGameObject() : void
+    - objectView : ObjectView = null
+    - modeChangeView : ModeChangeView
+    + Init() : void
+    + Callback(scene:Scene, mode:OpenSceneMode) : void
+    - Callback2(scene:Scene, setup:NewSceneSetup, mode:NewSceneMode) : void
+    + OnEnable() : void
+    + OnDisable() : void
+}
+EditorWindow <|-- SceneEditor
+@enduml

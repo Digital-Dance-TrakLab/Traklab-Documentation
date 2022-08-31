@@ -1,0 +1,17 @@
+@startuml
+class LineRendererViewTest {
+    window : EditorWindow
+    lineObject : GameObject
+    model : LineRendererModel
+    view : LineRendererView
+    + Setup() : void
+    + TearDown() : void
+    + ColorCanBeSetTest() : IEnumerator
+    + LineThicknessCanBeSetTest() : IEnumerator
+    + LineLifeSpanCanBeSetTest() : IEnumerator
+}
+class TestWindow {
+}
+LineRendererViewTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

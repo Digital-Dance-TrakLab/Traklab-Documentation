@@ -1,0 +1,83 @@
+@startuml
+class NatNetException {
+    + NatNetException()
+    + NatNetException(message:string)
+    + NatNetException(message:string, inner:Exception)
+    <<internal>> {static} ThrowIfNotOK(result:NatNetError, message:string) : void
+}
+class NatNetLogging <<static>> {
+    + {static}  <<event>> OnLogMessage : EventHandler<NatNetLogEventArgs> 
+    - {static} m_nativeLogHandler : NatNetLogCallback
+    - {static} m_nativeLogEventArgs : NatNetLogEventArgs
+    {static} NatNetLogging()
+    - {static} LogCallbackNativeThunk(level:NatNetVerbosity, pMessage:IntPtr) : void
+}
+class NatNetServerDiscovery {
+    + DiscoveredServers : List<sNatNetDiscoveredServer> <<get>>
+    +  <<event>> OnServerDiscovered : EventHandler<NatNetServerDiscoveredEventArgs> 
+    - m_disposed : bool = false
+    - m_discoveryHandle : IntPtr
+    - m_nativeCallbackHandler : NatNetServerDiscoveryCallback
+    - m_serverDiscoveredEventArgs : NatNetServerDiscoveredEventArgs
+    - m_discoveredServers : List<sNatNetDiscoveredServer>
+    + NatNetServerDiscovery(knownServerAddresses:IEnumerable<string>)
+    ServerDiscoveredNativeThunk(discoveredServer:sNatNetDiscoveredServer, pUserContext:IntPtr) : void
+    + Dispose() : void
+    # <<virtual>> Dispose(disposing:bool) : void
+    - ThrowIfDisposed() : void
+}
+class NatNetClient {
+    + {static} NatNetLibVersion : Version <<get>>
+    + Connected : bool <<get>>
+    + ServerDescription : sServerDescription <<get>>
+    + ServerAppVersion : Version <<get>>
+    +  <<event>> NativeFrameReceived : EventHandler<NativeFrameReceivedEventArgs> 
+    - m_disposed : bool = false
+    - m_clientHandle : IntPtr
+    - m_serverDesc : sServerDescription
+    - m_nativeFrameReceivedHandler : NatNetFrameReceivedCallback
+    - m_nativeFrameReceivedEventArgs : NativeFrameReceivedEventArgs
+    + NatNetClient()
+    + Connect(connType:NatNetConnectionType, localAddress:IPAddress, serverAddress:IPAddress, serverCommandPort:UInt16, serverDataPort:UInt16, multicastAddress:IPAddress) : void
+    + Disconnect() : void
+    + Request(request:string, pResponse:IntPtr, pResponseLenBytes:Int32, timeoutMs:Int32, numAttempts:Int32) : NatNetError
+    + RequestFloat(request:string, timeoutMs:Int32, numAttempts:Int32) : float
+    + RequestInt32(request:string, timeoutMs:Int32, numAttempts:Int32) : Int32
+    + RequestCommand(request:string, timeoutMs:Int32, numAttempts:Int32) : bool
+    + GetDataDescriptions(descriptionTypesMask:UInt32) : DataDescriptions
+    + GetPredictedRigidBodyPose(rbId:Int32, rbData:sRigidBodyData, dt:double) : NatNetError
+    - FrameReceivedNativeThunk(pFrameOfMocapData:IntPtr, pUserData:IntPtr) : void
+    + Dispose() : void
+    # <<virtual>> Dispose(disposing:bool) : void
+    - ThrowIfDisposed() : void
+}
+class NatNetLogEventArgs {
+    + Verbosity : NatNetVerbosity <<get>> <<set>>
+    + Message : String <<get>> <<set>>
+}
+class NatNetServerDiscoveredEventArgs {
+    + DiscoveredServer : sNatNetDiscoveredServer <<get>> <<set>>
+}
+class DataDescriptions {
+    + MarkerSetDescriptions : List<sMarkerSetDescription>
+    + RigidBodyDescriptions : List<sRigidBodyDescription>
+    + SkeletonDescriptions : List<sSkeletonDescription>
+    + ForcePlateDescriptions : List<sForcePlateDescription>
+    + CameraDescriptions : List<sCameraDescription>
+}
+class NativeFrameReceivedEventArgs {
+    - m_marshaledFrame : sFrameOfMocapData?
+    - m_nativeFrame : IntPtr
+    + NativeFramePointer : IntPtr <<get>> <<set>>
+    + MarshaledFrame : sFrameOfMocapData <<get>>
+}
+IDisposable <|-- NatNetServerDiscovery
+IDisposable <|-- NatNetClient
+NatNetLogging +-- NatNetLogEventArgs
+EventArgs <|-- NatNetLogEventArgs
+NatNetServerDiscovery +-- NatNetServerDiscoveredEventArgs
+EventArgs <|-- NatNetServerDiscoveredEventArgs
+NatNetClient +-- DataDescriptions
+NatNetClient +-- NativeFrameReceivedEventArgs
+EventArgs <|-- NativeFrameReceivedEventArgs
+@enduml

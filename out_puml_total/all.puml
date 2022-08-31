@@ -1,0 +1,67 @@
+@startuml
+left to right direction
+frame EditorWindows {
+!include .\\Editor\ObjectEditor.puml
+!include .\\Editor\SceneEditor.puml
+}
+
+frame Models{
+!include .\\Scripts\Models\ActorModel.puml
+!include .\\Scripts\Models\AmbientLightingModel.puml
+!include .\\Scripts\Models\AvatarConfigurationsToBones.puml
+!include .\\Scripts\Models\BackgroundSelectorModel.puml
+!include .\\Scripts\Models\CameraModel.puml
+!include .\\Scripts\Models\EffectSelectorModel.puml
+!include .\\Scripts\Models\LightingSelectorModel.puml
+!include .\\Scripts\Models\LineRendererModel.puml
+!include .\\Scripts\Models\Model.puml
+!include .\\Scripts\Models\MotiveConnectModel.puml
+!include .\\Scripts\Models\MotiveStateModel.puml
+!include .\\Scripts\Models\MultiChildModel.puml
+!include .\\Scripts\Models\OnChanged.puml
+!include .\\Scripts\Models\OnDeleted.puml
+!include .\\Scripts\Models\ParticleModel.puml
+!include .\\Scripts\Models\PreviewModel.puml
+!include .\\Scripts\Models\RigidBodyModel.puml
+!include .\\Scripts\Models\SceneModel.puml
+!include .\\Scripts\Models\SelectorModel.puml
+!include .\\Scripts\Models\SkyboxModel.puml
+!include .\\Scripts\Models\SolidColourModel.puml
+!include .\\Scripts\Models\SpawnLocation.puml
+!include .\\Scripts\Models\SunLightModel.puml
+!include .\\Scripts\Models\ThreePointLightModel.puml
+}
+frame Utils {
+!include .\\Scripts\Models\Utils.puml
+!include .\\Scripts\Utility\RandomNameGenerator.puml
+!include .\\Scripts\Utility\StringUtility.puml
+!include .\\Scripts\Utility\WindowUtilityFunctions.puml
+}
+
+frame Views{
+!include .\\Scripts\Views\ActorView.puml
+!include .\\Scripts\Views\AddActor.puml
+!include .\\Scripts\Views\AddRigidBody.puml
+!include .\\Scripts\Views\AmbientLightingView.puml
+!include .\\Scripts\Views\BackgroundSelector.puml
+!include .\\Scripts\Views\CameraView.puml
+!include .\\Scripts\Views\ComponentHeader.puml
+!include .\\Scripts\Views\EffectSelector.puml
+!include .\\Scripts\Views\LightSelection.puml
+!include .\\Scripts\Views\LineRendererView.puml
+!include .\\Scripts\Views\ModeChangeView.puml
+!include .\\Scripts\Views\ObjectSearchView.puml
+!include .\\Scripts\Views\ObjectSelectionOption.puml
+!include .\\Scripts\Views\ObjectView.puml
+!include .\\Scripts\Views\ParticleView.puml
+!include .\\Scripts\Views\PreviewView.puml
+!include .\\Scripts\Views\RemoveActor.puml
+!include .\\Scripts\Views\RigidBodyView.puml
+!include .\\Scripts\Views\SceneView.puml
+!include .\\Scripts\Views\SearchBoxView.puml
+!include .\\Scripts\Views\SkyboxSelection.puml
+!include .\\Scripts\Views\SolidLightView.puml
+!include .\\Scripts\Views\SunlightView.puml
+!include .\\Scripts\Views\ThreePointLightView.puml
+}
+@enduml

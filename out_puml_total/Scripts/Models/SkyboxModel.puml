@@ -1,0 +1,9 @@
+@startuml
+class SkyboxModel {
+    + fileName : string
+    + <<override>> Start() : void
+    + <<override>> OnChanged() : void
+    + <<override>> CreateUI() : VisualElement
+}
+Model <|-- SkyboxModel
+@enduml

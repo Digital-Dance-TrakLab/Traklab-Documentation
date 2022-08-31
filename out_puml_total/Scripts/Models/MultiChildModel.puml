@@ -1,0 +1,22 @@
+@startuml
+abstract class MultiChildModel {
+    - objectsInScene : List<GameObject>
+    + targets : List<Transform>
+    + staleTargets : bool = false
+    + emitFrom : string
+    + emitFromPrev : string
+    + baseObject : GameObject
+    + previousBase : GameObject
+    + <<override>> Start() : void
+    - RecalculateTargets(parentAvatar:GameObject) : void
+    - RemoveStaleObjects() : void
+    - AddNewObjectsIfDirty() : void
+    - UpdateEffects() : void
+    + <<override>> OnChanged() : void
+    - SpawnEffects(target:Transform) : void
+    + <<virtual>> ChildSpawned(target:GameObject) : GameObject
+    + <<virtual>> GetAvatar() : GameObject
+    + <<virtual>> ChangeBase(go:GameObject) : void
+}
+Model <|-- MultiChildModel
+@enduml

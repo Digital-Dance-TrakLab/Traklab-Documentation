@@ -1,0 +1,18 @@
+@startuml
+class SkyboxSelectionTest {
+    + Setup() : void
+    + TearDown() : void
+    + LabelCanBeSeen() : IEnumerator
+    + DropdownFieldCanBeSeen() : IEnumerator
+    + DropdownFieldChoicesAreCorrect() : IEnumerator
+}
+class TestWindow {
+}
+SkyboxSelectionTest --> "window" EditorWindow
+SkyboxSelectionTest --> "go" GameObject
+SkyboxSelectionTest --> "model" SkyboxModel
+SkyboxSelectionTest --> "view" SkyboxSelection
+SkyboxSelectionTest --> "initialSkybox" Material
+SkyboxSelectionTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

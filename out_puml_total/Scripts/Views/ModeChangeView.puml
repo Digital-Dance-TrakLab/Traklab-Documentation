@@ -1,0 +1,14 @@
+@startuml
+class ModeChangeView {
+    label : Label
+    +  <<event>> onModeHasChanged : ModeHasChanged 
+    hasMoreThanOneWindow : bool = false
+    + ModeChangeView()
+    + ModeChangeView(numberOfWindows:int)
+    - modeChanged(state:PlayModeStateChange) : void
+    - lb : Label
+    - AddWarningBox() : VisualElement
+    - DisplayWarningDialogBox() : void
+}
+VisualElement <|-- ModeChangeView
+@enduml

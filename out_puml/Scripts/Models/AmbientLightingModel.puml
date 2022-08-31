@@ -1,0 +1,12 @@
+@startuml
+class AmbientLightingModel {
+    + ambientLightingChoice : string
+    + <<override>> OnChanged() : void
+    + <<override>> CreateUI() : VisualElement
+}
+class "List`1"<T> {
+}
+Model <|-- AmbientLightingModel
+AmbientLightingModel o-> "ambientColour" Color
+AmbientLightingModel o-> "choices<string>" "List`1"
+@enduml

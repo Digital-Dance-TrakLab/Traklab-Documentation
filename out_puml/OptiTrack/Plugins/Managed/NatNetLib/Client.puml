@@ -1,0 +1,85 @@
+@startuml
+class NatNetException {
+    + NatNetException()
+    + NatNetException(message:string)
+    + NatNetException(message:string, inner:Exception)
+    <<internal>> {static} ThrowIfNotOK(result:NatNetError, message:string) : void
+}
+class NatNetLogging <<static>> {
+    + {static}  <<event>> OnLogMessage : EventHandler<NatNetLogEventArgs> 
+    {static} NatNetLogging()
+    - {static} LogCallbackNativeThunk(level:NatNetVerbosity, pMessage:IntPtr) : void
+}
+class NatNetServerDiscovery {
+    +  <<event>> OnServerDiscovered : EventHandler<NatNetServerDiscoveredEventArgs> 
+    - m_disposed : bool = false
+    + NatNetServerDiscovery(knownServerAddresses:IEnumerable<string>)
+    ServerDiscoveredNativeThunk(discoveredServer:sNatNetDiscoveredServer, pUserContext:IntPtr) : void
+    + Dispose() : void
+    # <<virtual>> Dispose(disposing:bool) : void
+    - ThrowIfDisposed() : void
+}
+class NatNetClient {
+    + Connected : bool <<get>>
+    +  <<event>> NativeFrameReceived : EventHandler<NativeFrameReceivedEventArgs> 
+    - m_disposed : bool = false
+    + NatNetClient()
+    + Connect(connType:NatNetConnectionType, localAddress:IPAddress, serverAddress:IPAddress, serverCommandPort:UInt16, serverDataPort:UInt16, multicastAddress:IPAddress) : void
+    + Disconnect() : void
+    + Request(request:string, pResponse:IntPtr, pResponseLenBytes:Int32, timeoutMs:Int32, numAttempts:Int32) : NatNetError
+    + RequestFloat(request:string, timeoutMs:Int32, numAttempts:Int32) : float
+    + RequestInt32(request:string, timeoutMs:Int32, numAttempts:Int32) : Int32
+    + RequestCommand(request:string, timeoutMs:Int32, numAttempts:Int32) : bool
+    + GetDataDescriptions(descriptionTypesMask:UInt32) : DataDescriptions
+    + GetPredictedRigidBodyPose(rbId:Int32, rbData:sRigidBodyData, dt:double) : NatNetError
+    - FrameReceivedNativeThunk(pFrameOfMocapData:IntPtr, pUserData:IntPtr) : void
+    + Dispose() : void
+    # <<virtual>> Dispose(disposing:bool) : void
+    - ThrowIfDisposed() : void
+}
+class NatNetLogEventArgs {
+}
+class "List`1"<T> {
+}
+class NatNetServerDiscoveredEventArgs {
+}
+class DataDescriptions {
+}
+class NativeFrameReceivedEventArgs {
+    - m_marshaledFrame : sFrameOfMocapData?
+}
+NatNetLogging --> "m_nativeLogHandler" NatNetLogCallback
+NatNetLogging o-> "m_nativeLogEventArgs" NatNetLogEventArgs
+IDisposable <|-- NatNetServerDiscovery
+NatNetServerDiscovery --> "DiscoveredServers<sNatNetDiscoveredServer>" "List`1"
+NatNetServerDiscovery o-> "m_discoveryHandle" IntPtr
+NatNetServerDiscovery --> "m_nativeCallbackHandler" NatNetServerDiscoveryCallback
+NatNetServerDiscovery o-> "m_serverDiscoveredEventArgs" NatNetServerDiscoveredEventArgs
+NatNetServerDiscovery o-> "m_discoveredServers<sNatNetDiscoveredServer>" "List`1"
+IDisposable <|-- NatNetClient
+NatNetClient --> "NatNetLibVersion" Version
+NatNetClient --> "ServerDescription" sServerDescription
+NatNetClient --> "ServerAppVersion" Version
+NatNetClient o-> "m_clientHandle" IntPtr
+NatNetClient --> "m_serverDesc" sServerDescription
+NatNetClient --> "m_nativeFrameReceivedHandler" NatNetFrameReceivedCallback
+NatNetClient o-> "m_nativeFrameReceivedEventArgs" NativeFrameReceivedEventArgs
+NatNetLogging +-- NatNetLogEventArgs
+EventArgs <|-- NatNetLogEventArgs
+NatNetLogEventArgs --> "Verbosity" NatNetVerbosity
+NatNetLogEventArgs --> "Message" String
+NatNetServerDiscovery +-- NatNetServerDiscoveredEventArgs
+EventArgs <|-- NatNetServerDiscoveredEventArgs
+NatNetServerDiscoveredEventArgs --> "DiscoveredServer" sNatNetDiscoveredServer
+NatNetClient +-- DataDescriptions
+DataDescriptions --> "MarkerSetDescriptions<sMarkerSetDescription>" "List`1"
+DataDescriptions --> "RigidBodyDescriptions<sRigidBodyDescription>" "List`1"
+DataDescriptions --> "SkeletonDescriptions<sSkeletonDescription>" "List`1"
+DataDescriptions --> "ForcePlateDescriptions<sForcePlateDescription>" "List`1"
+DataDescriptions --> "CameraDescriptions<sCameraDescription>" "List`1"
+NatNetClient +-- NativeFrameReceivedEventArgs
+EventArgs <|-- NativeFrameReceivedEventArgs
+NativeFrameReceivedEventArgs --> "m_nativeFrame" IntPtr
+NativeFrameReceivedEventArgs --> "NativeFramePointer" IntPtr
+NativeFrameReceivedEventArgs --> "MarshaledFrame" sFrameOfMocapData
+@enduml

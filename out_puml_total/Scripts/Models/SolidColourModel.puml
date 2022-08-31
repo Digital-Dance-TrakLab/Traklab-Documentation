@@ -1,0 +1,10 @@
+@startuml
+class SolidColourModel {
+    + color : Color
+    solidColourSkyBox : Material
+    + <<override>> Start() : void
+    + <<override>> OnChanged() : void
+    + <<override>> CreateUI() : VisualElement
+}
+Model <|-- SolidColourModel
+@enduml

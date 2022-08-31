@@ -1,0 +1,14 @@
+@startuml
+class SunLightModel {
+    + angle : float = 90
+    + timeOfDay : float = 12
+    - GetByName(name:string) : GameObject
+    - DestroyAllWithNameExcept(name:string, exempt:GameObject) : void
+    + <<override>> OnChanged() : void
+    + <<override>> CreateUI() : VisualElement
+}
+Model <|-- SunLightModel
+SunLightModel o-> "color" Color
+SunLightModel --> "sunInScene" GameObject
+SunLightModel --> "mainCamera" Camera
+@enduml

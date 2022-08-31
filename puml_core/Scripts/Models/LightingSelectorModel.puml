@@ -1,0 +1,13 @@
+@startuml
+
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\LightingSelectorModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Models\SelectorModel.puml
+!include ..\..\..\out_puml\Scripts\Views\EffectSelector.puml
+
+LightingSelectorModel -[dotted]-> EffectSelector : creates
+
+
+
+@enduml

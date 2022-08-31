@@ -1,0 +1,12 @@
+@startuml
+class LineRendererView {
+    - header : ComponentHeader
+    - colourPicker : ColorField
+    - endColourPicker : ColorField
+    - emitFrom : DropdownField
+    - thickness : Slider
+    - lifespan : FloatField
+    + LineRendererView(go:GameObject, isParentRigidBody:bool)
+}
+VisualElement <|-- LineRendererView
+@enduml

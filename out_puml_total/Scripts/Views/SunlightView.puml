@@ -1,0 +1,9 @@
+@startuml
+class SunlightView {
+    - header : ComponentHeader
+    - color : ColorField
+    - timeOfDay : Slider
+    + SunlightView()
+}
+VisualElement <|-- SunlightView
+@enduml

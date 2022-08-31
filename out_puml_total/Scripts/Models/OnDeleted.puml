@@ -1,0 +1,7 @@
+@startuml
+class OnDeleted {
+    +  <<event>> onDestroyed : Destroyed 
+    + OnDestroy() : void
+}
+MonoBehaviour <|-- OnDeleted
+@enduml

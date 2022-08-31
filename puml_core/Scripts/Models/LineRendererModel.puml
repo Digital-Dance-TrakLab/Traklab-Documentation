@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\LineRendererModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Models\MultiChildModel.puml
+!include ..\..\..\out_puml\Scripts\Views\LineRendererView.puml
+
+LineRendererModel -[dotted]-> LineRendererView : creates
+
+
+@enduml

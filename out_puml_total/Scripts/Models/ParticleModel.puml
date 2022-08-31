@@ -1,0 +1,10 @@
+@startuml
+class ParticleModel {
+    + colour : Color
+    + <<override>> ChildSpawned(go:GameObject) : GameObject
+    + <<override>> GetAvatar() : GameObject
+    + <<override>> ChangeBase(go:GameObject) : void
+    + <<override>> CreateUI() : VisualElement
+}
+MultiChildModel <|-- ParticleModel
+@enduml

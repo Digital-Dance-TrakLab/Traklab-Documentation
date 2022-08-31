@@ -1,0 +1,16 @@
+@startuml
+class ActorModelTest {
+    window : EditorWindow
+    go : GameObject
+    model : ActorModel
+    view : ActorView
+    + Setup() : void
+    + TearDown() : void
+    + ActorIsCreatedTest() : IEnumerator
+    + LoadDefaultAvatarTest() : IEnumerator
+}
+class TestWindow {
+}
+ActorModelTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

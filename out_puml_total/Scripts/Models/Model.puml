@@ -1,0 +1,15 @@
+@startuml
+abstract class Model {
+    shoudUpdate : bool = true
+    + shouldDraw : bool = true
+    + <<virtual>> Start() : void
+    + <<virtual>> CreateUI() : VisualElement
+    + <<virtual>> OnChanged() : void
+    # <<virtual>> Update() : void
+    + UpdateOnNextFrame() : void
+    + OnEnable() : void
+    + OnDisable() : void
+    + OnValidate() : void
+}
+MonoBehaviour <|-- Model
+@enduml

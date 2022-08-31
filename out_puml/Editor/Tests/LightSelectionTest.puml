@@ -1,0 +1,18 @@
+@startuml
+class LightSelectionTest {
+    + Setup() : void
+    + TearDown() : void
+    + LabelCanBeSeen() : IEnumerator
+    + EnumFieldLoadsCorrectly() : IEnumerator
+    + SunLightModeUIUpdate() : IEnumerator
+    + SolidLightModeUIUpdate() : IEnumerator
+}
+class TestWindow {
+}
+LightSelectionTest --> "window" EditorWindow
+LightSelectionTest --> "go" GameObject
+LightSelectionTest --> "model" LightingModel
+LightSelectionTest --> "view" LightSelection
+LightSelectionTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

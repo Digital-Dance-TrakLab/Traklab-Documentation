@@ -1,0 +1,9 @@
+@startuml
+class PreviewModelTest {
+    go : GameObject
+    model : PreviewModel
+    + Setup() : void
+    + TearDown() : void
+    + PreivewModelCorrectlyCreatesPreviewUI() : IEnumerator
+}
+@enduml

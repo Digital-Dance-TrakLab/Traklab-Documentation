@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="97px" preserveAspectRatio="none" style="width:232px;height:97px;background:#FFFFFF;" version="1.1" viewBox="0 0 232 97" width="232px" zoomAndPan="magnify"><defs/><g><!--MD5=[f6a7951737730a8042f8b0ea9eb35c94]
+class WindowUtilityFunctions--><g id="elem_WindowUtilityFunctions"><rect codeLine="1" fill="#F1F1F1" height="76.3125" id="WindowUtilityFunctions" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="211" x="7" y="7"/><ellipse cx="37.75" cy="28.3516" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M40.5156,24.2266 Q40.6719,24.0078 40.8594,23.8984 Q41.0469,23.7891 41.2656,23.7891 Q41.6406,23.7891 41.875,24.0547 Q42.1094,24.3047 42.1094,24.9141 L42.1094,26.3672 Q42.1094,26.9766 41.875,27.2422 Q41.6406,27.5078 41.2656,27.5078 Q40.9219,27.5078 40.7188,27.3047 Q40.5156,27.1172 40.4063,26.6016 Q40.3594,26.2422 40.1719,26.0547 Q39.8438,25.6797 39.2344,25.4609 Q38.625,25.2422 38,25.2422 Q37.2344,25.2422 36.5938,25.5703 Q35.9688,25.8984 35.4688,26.6484 Q34.9844,27.3984 34.9844,28.4297 L34.9844,29.5234 Q34.9844,30.7578 35.875,31.5859 Q36.7656,32.3984 38.3594,32.3984 Q39.2969,32.3984 39.9531,32.1484 Q40.3438,31.9922 40.7656,31.5547 Q41.0313,31.2891 41.1719,31.2109 Q41.3281,31.1328 41.5313,31.1328 Q41.8594,31.1328 42.1094,31.3984 Q42.375,31.6484 42.375,31.9922 Q42.375,32.3359 42.0313,32.7422 Q41.5313,33.3203 40.7344,33.6484 Q39.6563,34.1016 38.3594,34.1016 Q36.8438,34.1016 35.6406,33.4766 Q34.6563,32.9766 33.9688,31.9141 Q33.2813,30.8359 33.2813,29.5547 L33.2813,28.3984 Q33.2813,27.0703 33.8906,25.9297 Q34.5156,24.7734 35.6094,24.1641 Q36.7031,23.5391 37.9375,23.5391 Q38.6719,23.5391 39.3125,23.7109 Q39.9688,23.8672 40.5156,24.2266 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="42" x="106.25" y="24.457">«static»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="55.25" y="41.627">WindowUtilityFunctions</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="217" y1="49.7031" y2="49.7031"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="217" y1="57.7031" y2="57.7031"/><ellipse cx="18" cy="68.7031" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="185" x="27" y="76.2363">NumberOfOpenWindow() : int</text></g><!--MD5=[2750d1a89faaca72b4bf9d7739c208dc]
+@startuml
+!include ..\..\..\out_puml\Scripts\Utility\WindowUtilityFunctions.puml
+@enduml
+
+@startuml
+class WindowUtilityFunctions <<static>> {
+    + {static} NumberOfOpenWindow() : int
+}
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 20:55:52 AEST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: AU
+--></g></svg>

@@ -1,0 +1,9 @@
+@startuml
+class ObjectView {
+    - Handle(models:List<Model>) : void
+    + ChangeSelection(obj:GameObject) : void
+    - ChangeSelection(obj:GameObject, modelsChanged:List<Model>) : void
+}
+VisualElement <|-- ObjectView
+ObjectView o-> "selection" GameObject
+@enduml

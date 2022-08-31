@@ -1,0 +1,16 @@
+@startuml
+class SunLightViewTest {
+    window : EditorWindow
+    go : GameObject
+    model : SunLightModel
+    view : SunlightView
+    + Setup() : void
+    + TearDown() : void
+    + TimeOfDayCanBeSet() : IEnumerator
+    + ColorCanBeSet() : IEnumerator
+}
+class TestWindow {
+}
+SunLightViewTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

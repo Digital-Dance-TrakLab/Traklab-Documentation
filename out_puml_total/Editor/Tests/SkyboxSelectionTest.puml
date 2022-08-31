@@ -1,0 +1,18 @@
+@startuml
+class SkyboxSelectionTest {
+    window : EditorWindow
+    go : GameObject
+    model : SkyboxModel
+    view : SkyboxSelection
+    initialSkybox : Material
+    + Setup() : void
+    + TearDown() : void
+    + LabelCanBeSeen() : IEnumerator
+    + DropdownFieldCanBeSeen() : IEnumerator
+    + DropdownFieldChoicesAreCorrect() : IEnumerator
+}
+class TestWindow {
+}
+SkyboxSelectionTest +-- TestWindow
+EditorWindow <|-- TestWindow
+@enduml

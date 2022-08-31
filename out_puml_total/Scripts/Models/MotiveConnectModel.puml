@@ -1,0 +1,8 @@
+@startuml
+class MotiveConnectModel {
+    client : OptitrackStreamingClient
+    + <<override>> OnChanged() : void
+    + <<override>> CreateUI() : VisualElement
+}
+Model <|-- MotiveConnectModel
+@enduml

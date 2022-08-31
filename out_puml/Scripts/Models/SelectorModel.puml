@@ -1,0 +1,16 @@
+@startuml
+class SelectorModel {
+    + selected : string = ""
+    + shouldDrawSeparatelyChildren : bool = true
+    ComponentIndex(component:Component) : int
+    MoveComponentTo(end:int, component:Component) : void
+    + <<override>> OnChanged() : void
+    + GetSelected() : Model
+    + CreateSelectedVisual() : VisualElement
+}
+class "List`1"<T> {
+}
+Model <|-- SelectorModel
+SelectorModel o-> "types<System.Type>" "List`1"
+SelectorModel --> "names<string>" "List`1"
+@enduml

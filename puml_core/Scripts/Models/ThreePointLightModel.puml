@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+!include ..\..\..\out_puml\Scripts\Models\ThreePointLightModel.puml
+!include ..\..\..\out_puml\Scripts\Models\Model.puml
+!include ..\..\..\out_puml\Scripts\Views\SunlightView.puml
+
+ThreePointLightModel -[dotted]-> SunlightView : creates
+ThreePointLightModel -[dotted]-> Light: frontLight
+ThreePointLightModel -[dotted]-> Light: leftLight
+ThreePointLightModel -[dotted]-> Light: rightLight
+@enduml
