@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+title EditorWindows
+left to right direction
+
+skinparam Nodesep 15
+
+<style>
+classDiagram {
+    class {
+        header {
+            FontSize 25
+            FontStyle bold
+        }
+    }
+}
+</style>
+skinparam BackgroundColor #66CC00
+skinparam TitleFontSize 40
+
+!include .\\Editor\ObjectEditor.puml
+!include .\\Editor\SceneEditor.puml
+!include .\\Scripts\Views\ObjectSelectionOption.puml
+
+remove ObjectField
+remove SearchBoxView
+remove ObjectSelectionOption
+remove ObjectSelectionPopUp
+
+@enduml

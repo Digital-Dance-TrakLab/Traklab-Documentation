@@ -28,4 +28,9 @@ Install plant uml extension </br>
 ## Generate csv table for confluence
 ```
 python gen_table.py 
+
 ```
+
+<img style="max-width:800px" src="https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/Scripts/Utility/StringUtility/StringUtility.svg"/>
+
+<img style="max-width:800px" src="https://raw.githubusercontent.com/Digital-Dance-TrakLab/Traklab-Documentation/master/Images/CompletedInheritance.svg"/>

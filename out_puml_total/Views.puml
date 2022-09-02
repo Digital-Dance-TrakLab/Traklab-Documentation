@@ -1,0 +1,89 @@
+@startuml
+title Views
+left to right direction
+
+skinparam Nodesep 15
+skinparam ranksep 20
+
+
+<style>
+classDiagram {
+    class {
+        header {
+            FontSize 25
+            FontStyle bold
+        }
+    }
+}
+</style>
+skinparam BackgroundColor #FFE6CC
+skinparam TitleFontSize 40
+
+together {
+    class ActorView
+    class AddActor
+    class AddRigidBody
+    class AmbientLightingView
+    class BackgroundSelector
+    class CameraView
+    class ComponentHeader
+    class EffectSelector
+    class LightSelection
+    class LineRendererView
+    class ModeChangeView
+}
+
+together {
+    class ObjectView
+    class ParticleView
+    class PreviewView
+    class RemoveActor
+    class RigidBodyView
+    class SceneView
+    class SkyboxSelection
+    class SolidLightView
+    class SunlightView
+    class ThreePointLightView
+    class ObjectField
+    class SearchBoxView
+}
+
+together {
+    class ObjectSearchView
+    class ObjectSelectionPopUp
+    class ObjectField
+    class ObjectSelectionOption
+    class PopUp
+}
+
+remove PopUp
+remove EditorWindow
+
+!include .\\Scripts\Views\ActorView.puml
+!include .\\Scripts\Views\AddActor.puml
+!include .\\Scripts\Views\AddRigidBody.puml
+!include .\\Scripts\Views\AmbientLightingView.puml
+!include .\\Scripts\Views\BackgroundSelector.puml
+!include .\\Scripts\Views\CameraView.puml
+!include .\\Scripts\Views\ComponentHeader.puml
+!include .\\Scripts\Views\EffectSelector.puml
+!include .\\Scripts\Views\LightSelection.puml
+!include .\\Scripts\Views\LineRendererView.puml
+!include .\\Scripts\Views\ModeChangeView.puml
+!include .\\Scripts\Views\ObjectView.puml
+!include .\\Scripts\Views\ParticleView.puml
+!include .\\Scripts\Views\PreviewView.puml
+!include .\\Scripts\Views\RemoveActor.puml
+!include .\\Scripts\Views\RigidBodyView.puml
+!include .\\Scripts\Views\SceneView.puml
+!include .\\Scripts\Views\SkyboxSelection.puml
+!include .\\Scripts\Views\SolidLightView.puml
+!include .\\Scripts\Views\SunlightView.puml
+!include .\\Scripts\Views\ThreePointLightView.puml
+!include .\\Scripts\Views\SearchBoxView.puml
+!include .\\Scripts\Views\ObjectSearchView.puml
+!include .\\Scripts\Views\ObjectSelectionOption.puml
+class ObjectField
+ObjectField --|> VisualElement
+
+@enduml

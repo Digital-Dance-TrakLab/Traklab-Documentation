@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="781px" preserveAspectRatio="none" style="width:788px;height:781px;background:#66CC00;" version="1.1" viewBox="0 0 788 781" width="788px" zoomAndPan="magnify"><defs/><g><rect fill="#66CC00" height="60.3125" style="stroke:#00000000;stroke-width:1.0;" width="299" x="237.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="40" font-weight="bold" lengthAdjust="spacing" textLength="289" x="242.5" y="51.5234">EditorWindows</text><!--MD5=[8264bf2c50c5992408f21a29ac6786f2]
+class ObjectEditor--><g id="elem_ObjectEditor"><rect codeLine="1" fill="#F1F1F1" height="303.9766" id="ObjectEditor" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="516" x="265" y="78.3125"/><ellipse cx="444.25" cy="99.0352" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M447.0156,94.9102 Q447.1719,94.6914 447.3594,94.582 Q447.5469,94.4727 447.7656,94.4727 Q448.1406,94.4727 448.375,94.7383 Q448.6094,94.9883 448.6094,95.5977 L448.6094,97.0508 Q448.6094,97.6602 448.375,97.9258 Q448.1406,98.1914 447.7656,98.1914 Q447.4219,98.1914 447.2188,97.9883 Q447.0156,97.8008 446.9063,97.2852 Q446.8594,96.9258 446.6719,96.7383 Q446.3438,96.3633 445.7344,96.1445 Q445.125,95.9258 444.5,95.9258 Q443.7344,95.9258 443.0938,96.2539 Q442.4688,96.582 441.9688,97.332 Q441.4844,98.082 441.4844,99.1133 L441.4844,100.207 Q441.4844,101.4414 442.375,102.2695 Q443.2656,103.082 444.8594,103.082 Q445.7969,103.082 446.4531,102.832 Q446.8438,102.6758 447.2656,102.2383 Q447.5313,101.9727 447.6719,101.8945 Q447.8281,101.8164 448.0313,101.8164 Q448.3594,101.8164 448.6094,102.082 Q448.875,102.332 448.875,102.6758 Q448.875,103.0195 448.5313,103.4258 Q448.0313,104.0039 447.2344,104.332 Q446.1563,104.7852 444.8594,104.7852 Q443.3438,104.7852 442.1406,104.1602 Q441.1563,103.6602 440.4688,102.5977 Q439.7813,101.5195 439.7813,100.2383 L439.7813,99.082 Q439.7813,97.7539 440.3906,96.6133 Q441.0156,95.457 442.1094,94.8477 Q443.2031,94.2227 444.4375,94.2227 Q445.1719,94.2227 445.8125,94.3945 Q446.4688,94.5508 447.0156,94.9102 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="25" font-weight="bold" lengthAdjust="spacing" textLength="149" x="464.75" y="109.2646">ObjectEditor</text><line style="stroke:#181818;stroke-width:0.5;" x1="266" x2="780" y1="119.7578" y2="119.7578"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="127.7578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="285" y="138.291">objectView : ObjectView</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="145.3672"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="193" x="285" y="155.9004">searchBox : ObjectSearchView</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="162.9766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="285" y="173.5098">addActor : AddActor</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="180.5859"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="189" x="285" y="191.1191">addRigidBody : AddRigidBody</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="198.1953"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="240" x="285" y="208.7285">modeChangeView : ModeChangeView</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="215.8047"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="216" x="285" y="226.3379">actorsHeader : ComponentHeader</text><line style="stroke:#181818;stroke-width:0.5;" x1="266" x2="780" y1="233.4141" y2="233.4141"/><ellipse cx="276" cy="244.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="135" x="285" y="251.9473">ShowExample() : void</text><ellipse cx="276" cy="262.0234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="285" y="269.5566">InitView() : void</text><ellipse cx="276" cy="279.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="285" y="287.166">Init() : void</text><ellipse cx="276" cy="297.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="341" x="285" y="304.7754">Callback(scene:Scene, mode:OpenSceneMode) : void</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="311.8516"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="490" x="285" y="322.3848">Callback2(scene:Scene, setup:NewSceneSetup, mode:NewSceneMode) : void</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="329.4609"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="290" x="285" y="339.9941">Callback3(scene:Scene, scene1:Scene) : void</text><ellipse cx="276" cy="350.0703" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="285" y="357.6035">OnEnable() : void</text><ellipse cx="276" cy="367.6797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="285" y="375.2129">OnDisable() : void</text></g><!--MD5=[802e82b404e578583cfeee29107899de]
+class EditorWindow--><g id="elem_EditorWindow"><rect fill="#F1F1F1" height="57.4453" id="EditorWindow" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="198" x="7" y="485.8125"/><ellipse cx="22" cy="506.5352" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M24.7656,502.4102 Q24.9219,502.1914 25.1094,502.082 Q25.2969,501.9727 25.5156,501.9727 Q25.8906,501.9727 26.125,502.2383 Q26.3594,502.4883 26.3594,503.0977 L26.3594,504.5508 Q26.3594,505.1602 26.125,505.4258 Q25.8906,505.6914 25.5156,505.6914 Q25.1719,505.6914 24.9688,505.4883 Q24.7656,505.3008 24.6563,504.7852 Q24.6094,504.4258 24.4219,504.2383 Q24.0938,503.8633 23.4844,503.6445 Q22.875,503.4258 22.25,503.4258 Q21.4844,503.4258 20.8438,503.7539 Q20.2188,504.082 19.7188,504.832 Q19.2344,505.582 19.2344,506.6133 L19.2344,507.707 Q19.2344,508.9414 20.125,509.7695 Q21.0156,510.582 22.6094,510.582 Q23.5469,510.582 24.2031,510.332 Q24.5938,510.1758 25.0156,509.7383 Q25.2813,509.4727 25.4219,509.3945 Q25.5781,509.3164 25.7813,509.3164 Q26.1094,509.3164 26.3594,509.582 Q26.625,509.832 26.625,510.1758 Q26.625,510.5195 26.2813,510.9258 Q25.7813,511.5039 24.9844,511.832 Q23.9063,512.2852 22.6094,512.2852 Q21.0938,512.2852 19.8906,511.6602 Q18.9063,511.1602 18.2188,510.0977 Q17.5313,509.0195 17.5313,507.7383 L17.5313,506.582 Q17.5313,505.2539 18.1406,504.1133 Q18.7656,502.957 19.8594,502.3477 Q20.9531,501.7227 22.1875,501.7227 Q22.9219,501.7227 23.5625,501.8945 Q24.2188,502.0508 24.7656,502.4102 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="25" font-weight="bold" lengthAdjust="spacing" textLength="166" x="36" y="516.7646">EditorWindow</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="204" y1="527.2578" y2="527.2578"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="204" y1="535.2578" y2="535.2578"/></g><!--MD5=[eb7ba22be95d2a9aaf5248fbb518b40d]
+class SceneEditor--><g id="elem_SceneEditor"><rect codeLine="1" fill="#F1F1F1" height="233.5391" id="SceneEditor" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="516" x="265" y="397.3125"/><ellipse cx="445.75" cy="418.0352" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M448.5156,413.9102 Q448.6719,413.6914 448.8594,413.582 Q449.0469,413.4727 449.2656,413.4727 Q449.6406,413.4727 449.875,413.7383 Q450.1094,413.9883 450.1094,414.5977 L450.1094,416.0508 Q450.1094,416.6602 449.875,416.9258 Q449.6406,417.1914 449.2656,417.1914 Q448.9219,417.1914 448.7188,416.9883 Q448.5156,416.8008 448.4063,416.2852 Q448.3594,415.9258 448.1719,415.7383 Q447.8438,415.3633 447.2344,415.1445 Q446.625,414.9258 446,414.9258 Q445.2344,414.9258 444.5938,415.2539 Q443.9688,415.582 443.4688,416.332 Q442.9844,417.082 442.9844,418.1133 L442.9844,419.207 Q442.9844,420.4414 443.875,421.2695 Q444.7656,422.082 446.3594,422.082 Q447.2969,422.082 447.9531,421.832 Q448.3438,421.6758 448.7656,421.2383 Q449.0313,420.9727 449.1719,420.8945 Q449.3281,420.8164 449.5313,420.8164 Q449.8594,420.8164 450.1094,421.082 Q450.375,421.332 450.375,421.6758 Q450.375,422.0195 450.0313,422.4258 Q449.5313,423.0039 448.7344,423.332 Q447.6563,423.7852 446.3594,423.7852 Q444.8438,423.7852 443.6406,423.1602 Q442.6563,422.6602 441.9688,421.5977 Q441.2813,420.5195 441.2813,419.2383 L441.2813,418.082 Q441.2813,416.7539 441.8906,415.6133 Q442.5156,414.457 443.6094,413.8477 Q444.7031,413.2227 445.9375,413.2227 Q446.6719,413.2227 447.3125,413.3945 Q447.9688,413.5508 448.5156,413.9102 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="25" font-weight="bold" lengthAdjust="spacing" textLength="146" x="466.25" y="428.2646">SceneEditor</text><line style="stroke:#181818;stroke-width:0.5;" x1="266" x2="780" y1="438.7578" y2="438.7578"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="446.7578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="285" y="457.291">scene : GameObject</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="464.3672"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="187" x="285" y="474.9004">objectView : ObjectView = null</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="481.9766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="240" x="285" y="492.5098">modeChangeView : ModeChangeView</text><line style="stroke:#181818;stroke-width:0.5;" x1="266" x2="780" y1="499.5859" y2="499.5859"/><ellipse cx="276" cy="510.5859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="135" x="285" y="518.1191">ShowExample() : void</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="525.1953"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="185" x="285" y="535.7285">InitSceneGameObject() : void</text><ellipse cx="276" cy="545.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="285" y="553.3379">Init() : void</text><ellipse cx="276" cy="563.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="341" x="285" y="570.9473">Callback(scene:Scene, mode:OpenSceneMode) : void</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="273" y="578.0234"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="490" x="285" y="588.5566">Callback2(scene:Scene, setup:NewSceneSetup, mode:NewSceneMode) : void</text><ellipse cx="276" cy="598.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="285" y="606.166">OnEnable() : void</text><ellipse cx="276" cy="616.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="285" y="623.7754">OnDisable() : void</text></g><!--MD5=[528925e99774133c6327b5925d78184b]
+class PopUp--><g id="elem_PopUp"><rect codeLine="5" fill="#F1F1F1" height="127.8828" id="PopUp" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="342" x="352" y="646.3125"/><ellipse cx="478.75" cy="667.0352" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M481.5156,662.9102 Q481.6719,662.6914 481.8594,662.582 Q482.0469,662.4727 482.2656,662.4727 Q482.6406,662.4727 482.875,662.7383 Q483.1094,662.9883 483.1094,663.5977 L483.1094,665.0508 Q483.1094,665.6602 482.875,665.9258 Q482.6406,666.1914 482.2656,666.1914 Q481.9219,666.1914 481.7188,665.9883 Q481.5156,665.8008 481.4063,665.2852 Q481.3594,664.9258 481.1719,664.7383 Q480.8438,664.3633 480.2344,664.1445 Q479.625,663.9258 479,663.9258 Q478.2344,663.9258 477.5938,664.2539 Q476.9688,664.582 476.4688,665.332 Q475.9844,666.082 475.9844,667.1133 L475.9844,668.207 Q475.9844,669.4414 476.875,670.2695 Q477.7656,671.082 479.3594,671.082 Q480.2969,671.082 480.9531,670.832 Q481.3438,670.6758 481.7656,670.2383 Q482.0313,669.9727 482.1719,669.8945 Q482.3281,669.8164 482.5313,669.8164 Q482.8594,669.8164 483.1094,670.082 Q483.375,670.332 483.375,670.6758 Q483.375,671.0195 483.0313,671.4258 Q482.5313,672.0039 481.7344,672.332 Q480.6563,672.7852 479.3594,672.7852 Q477.8438,672.7852 476.6406,672.1602 Q475.6563,671.6602 474.9688,670.5977 Q474.2813,669.5195 474.2813,668.2383 L474.2813,667.082 Q474.2813,665.7539 474.8906,664.6133 Q475.5156,663.457 476.6094,662.8477 Q477.7031,662.2227 478.9375,662.2227 Q479.6719,662.2227 480.3125,662.3945 Q480.9688,662.5508 481.5156,662.9102 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="25" font-weight="bold" lengthAdjust="spacing" textLength="80" x="499.25" y="677.2646">PopUp</text><line style="stroke:#181818;stroke-width:0.5;" x1="353" x2="693" y1="687.7578" y2="687.7578"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="360" y="695.7578"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="203" x="372" y="706.291">selector : ObjectSelectionPopUp</text><line style="stroke:#181818;stroke-width:0.5;" x1="353" x2="693" y1="713.3672" y2="713.3672"/><ellipse cx="363" cy="724.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="316" x="372" y="731.9004">SetSelector(selector:ObjectSelectionPopUp) : void</text><ellipse cx="363" cy="741.9766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="197" x="372" y="749.5098">ShowPop(name:string) : PopUp</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="372" y="767.1191">OnLostFocus() : void</text></g><!--MD5=[2e18e71dee856b79601525f127c58bbe]
+reverse link EditorWindow to ObjectEditor--><g id="link_EditorWindow_ObjectEditor"><path codeLine="17" d="M156.42,472.8125 C187.02,447.7225 227.5,415.6125 265,389.3125 C268.22,387.0525 271.47,384.7925 274.76,382.5225 " fill="none" id="EditorWindow-backto-ObjectEditor" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="160.83,478.2425,140.95,485.5825,151.92,467.4425,160.83,478.2425" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[73d1288a2cb20594188f6ccaa3898209]
+reverse link EditorWindow to SceneEditor--><g id="link_EditorWindow_SceneEditor"><path codeLine="13" d="M225.24,514.3125 C237.96,514.3125 251.23,514.3125 264.8,514.3125 " fill="none" id="EditorWindow-backto-SceneEditor" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="225.09,521.3125,205.09,514.3125,225.09,507.3125,225.09,521.3125" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[22d8242a35ecb3fa8fffcf8bd8dc9ca0]
+reverse link EditorWindow to PopUp--><g id="link_EditorWindow_PopUp"><path codeLine="16" d="M150.97,556.5925 C180.99,583.3925 222.82,616.9225 265,638.3125 C292.07,652.0425 322.11,663.4525 351.83,672.8425 " fill="none" id="EditorWindow-backto-PopUp" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="146.04,561.5625,136,542.9025,155.48,551.2325,146.04,561.5625" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7ebab43584fa1fba139449852bf263b4]
+@startuml
+left to right direction
+title EditorWindows
+left to right direction
+
+skinparam Nodesep 15
+
+<style>
+classDiagram {
+    class {
+        header {
+            FontSize 25
+            FontStyle bold
+        }
+    }
+}
+</style>
+skinparam BackgroundColor #66CC00
+skinparam TitleFontSize 40
+
+!include .\\Editor\ObjectEditor.puml
+!include .\\Editor\SceneEditor.puml
+!include .\\Scripts\Views\ObjectSelectionOption.puml
+
+remove ObjectField
+remove SearchBoxView
+remove ObjectSelectionOption
+remove ObjectSelectionPopUp
+
+@enduml
+
+@startuml
+left to right direction
+title EditorWindows
+left to right direction
+
+skinparam Nodesep 15
+
+<style>
+classDiagram {
+    class {
+        header {
+            FontSize 25
+            FontStyle bold
+        }
+    }
+}
+</style>
+skinparam BackgroundColor #66CC00
+skinparam TitleFontSize 40
+
+class ObjectEditor {
+    + {static} ShowExample() : void
+    - objectView : ObjectView
+    - searchBox : ObjectSearchView
+    - addActor : AddActor
+    - addRigidBody : AddRigidBody
+    - modeChangeView : ModeChangeView
+    - actorsHeader : ComponentHeader
+    + InitView() : void
+    + Init() : void
+    + Callback(scene:Scene, mode:OpenSceneMode) : void
+    - Callback2(scene:Scene, setup:NewSceneSetup, mode:NewSceneMode) : void
+    - Callback3(scene:Scene, scene1:Scene) : void
+    + OnEnable() : void
+    + OnDisable() : void
+}
+EditorWindow <|- - ObjectEditor
+class SceneEditor {
+    - scene : GameObject
+    + {static} ShowExample() : void
+    - InitSceneGameObject() : void
+    - objectView : ObjectView = null
+    - modeChangeView : ModeChangeView
+    + Init() : void
+    + Callback(scene:Scene, mode:OpenSceneMode) : void
+    - Callback2(scene:Scene, setup:NewSceneSetup, mode:NewSceneMode) : void
+    + OnEnable() : void
+    + OnDisable() : void
+}
+EditorWindow <|- - SceneEditor
+class ObjectSelectionOption {
+    popUp : PopUp
+    + ObjectSelectionOption(filters:string, searchInFolders:string[])
+}
+class PopUp {
+    - selector : ObjectSelectionPopUp
+    + SetSelector(selector:ObjectSelectionPopUp) : void
+    + {static} ShowPop(name:string) : PopUp
+    OnLostFocus() : void
+}
+class ObjectSelectionPopUp {
+    + ObjectSelectionPopUp(filters:string, searchInFolders:string[])
+}
+ObjectField <|- - ObjectSelectionOption
+ObjectSelectionOption +- - PopUp
+EditorWindow <|- - PopUp
+ObjectSelectionOption +- - ObjectSelectionPopUp
+SearchBoxView <|- - ObjectSelectionPopUp
+
+
+remove ObjectField
+remove SearchBoxView
+remove ObjectSelectionOption
+remove ObjectSelectionPopUp
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 20:55:52 AEST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: AU
+--></g></svg>

@@ -1,0 +1,42 @@
+@startuml
+title Models
+left to right direction
+
+skinparam Nodesep 15
+
+<style>
+classDiagram {
+    class {
+        header {
+            FontSize 25
+            FontStyle bold
+        }
+    }
+}
+</style>
+skinparam BackgroundColor #CCFFFF
+skinparam TitleFontSize 40
+skinparam ranksep 20
+
+
+!include .\\Scripts\Models\ActorModel.puml
+!include .\\Scripts\Models\AmbientLightingModel.puml
+!include .\\Scripts\Models\BackgroundSelectorModel.puml
+!include .\\Scripts\Models\CameraModel.puml
+!include .\\Scripts\Models\EffectSelectorModel.puml
+!include .\\Scripts\Models\LightingSelectorModel.puml
+!include .\\Scripts\Models\LineRendererModel.puml
+!include .\\Scripts\Models\Model.puml
+!include .\\Scripts\Models\MotiveConnectModel.puml
+!include .\\Scripts\Models\MultiChildModel.puml
+!include .\\Scripts\Models\ParticleModel.puml
+!include .\\Scripts\Models\PreviewModel.puml
+!include .\\Scripts\Models\RigidBodyModel.puml
+!include .\\Scripts\Models\SceneModel.puml
+!include .\\Scripts\Models\SelectorModel.puml
+!include .\\Scripts\Models\SkyboxModel.puml
+!include .\\Scripts\Models\SolidColourModel.puml
+!include .\\Scripts\Models\SunLightModel.puml
+!include .\\Scripts\Models\ThreePointLightModel.puml
+
+@enduml
